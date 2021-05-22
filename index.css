@@ -1,5 +1,5 @@
 #estadio{
-    background-image: url("resources/Estadio_jose.jpg");
+    background-image: url("resources/Estadio_jose.png");
     background-repeat: no-repeat;
     background-attachment: local, scroll;
     background-size: cover;
@@ -9,6 +9,14 @@
     font-size:25px;
     color:black;
 }
+
+#otitulo {
+    font-family: 'Sancreek', cursive;
+    font-size:40px;
+    color:black;
+}
+
+
 
 .barra_menu {
     font-family: 'Sanchez', serif;
