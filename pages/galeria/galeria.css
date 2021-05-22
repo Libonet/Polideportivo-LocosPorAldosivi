@@ -70,3 +70,7 @@ input {
 #fourth {
     display: none;
 }
+
+#seleccion {
+    background-color: rgba(60, 212, 55, 0.863);
+}
