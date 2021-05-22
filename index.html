@@ -13,6 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
     <link rel="stylesheet" href="index.css">
     <script type="text/javascript" src="script.js"></script>
+    <link rel="shortcut icon" href="resources/EnanitoVerde.png">
 </head>
 
 <body class="w3-dark-gray">
@@ -44,23 +45,39 @@
             </div>
         </div>
         <div class="w3-row">
-            <div class="w3-container w3-quarter w3-center">
-                <p></p>
-            </div>
-            <div class="w3-container w3-quarter w3-center">
+            <div class="w3-container w3-third w3-center">
                 <img src="resources/tabla-1.jpeg" width= 100% >
             </div>
-            <div class="w3-container w3-quarter w3-center">
-                <img src="resources/tabla-2.jpeg" width= 100% >
-            </div>
-            <div class="w3-container w3-quarter w3-center">
+            <div class="w3-container w3-third">
                 <p></p>
+            </div>
+            <div class="w3-container w3-third w3-center">
+                <img src="resources/tabla-2.jpeg" width= 100% >
             </div>
         </div>
         <br>
     </div>
-    <div id="botones">
-
+    <div id="botones" >
+        <div class="w3-row vertical-center">
+            <div class="w3-container w3-third w3-center">
+                <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Reservá una cancha</button>
+               <div id="id01" class="w3-modal">
+                <div class="w3-modal-content">
+                    <div class="w3-container">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <p>Acá tenemos que poner el formulario per sé</p>
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="w3-container w3-third">
+                <p></p>
+            </div>
+            <div class="w3-container w3-third w3-center">
+                
+            </div>
+        </div>
     </div>
     <div class="w3-row">
     <div class="w3-container w3-quarter">

@@ -1,5 +1,5 @@
 #estadio{
-    background-image: url("resources/Estadio_jose.png");
+    background-image: url("resources/AldosiviClean.jpg");
     background-repeat: no-repeat;
     background-attachment: local, scroll;
     background-size: cover;
@@ -14,6 +14,15 @@
     font-family: 'Sancreek', cursive;
     font-size:40px;
     color:black;
+}
+
+#botones{
+    background-image: url("resources/AldosiviWallpaperPeroNo4k.jpg");
+    background-repeat: no-repeat;
+    background-attachment: local, scroll;
+    background-size: cover;
+    height:100px;
+    padding-top:30px;
 }
 
 .barra_menu {
