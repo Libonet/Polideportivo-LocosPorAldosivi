@@ -1,3 +1,11 @@
+body {
+    background-image: url("../../resources/AldosiviWallpaperPeroNo4k.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Estilo de la barra */
 #titulo {
     font-family: 'Sancreek', cursive;
     font-size:25px;
@@ -13,4 +21,56 @@
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+
+/* Desaparece las imagenes en tamaño mobile */
+@media screen and (min-width: 801px) {
+    #garfelf1{
+        width: 20%;
+    }
+    #garfelf2{
+        width: 17%;
+    }
+    #garfelf3{
+        width: 15%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    #garfelf1{
+        width: 0%;
+    }
+    #garfelf2{
+        width: 0%;
+    }
+    #garfelf3{
+        width: 0%;
+    }
+}
+
+/* Estilo de las imagenes */
+.page img {
+    box-shadow: 7px 7px 15px black;
+    margin-bottom: 20px;
+}
+input {
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 7px 7px 13px green;
+}
+#second {
+    display: none;
+}
+#third {
+    display: none;
+}
+#fourth {
+    display: none;
+}
+
+#seleccion {
+    background-color: rgba(60, 212, 55, 0.863);
 }
