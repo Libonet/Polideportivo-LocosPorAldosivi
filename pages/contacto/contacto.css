@@ -14,7 +14,31 @@
     -1px 1px 0 #000,
     1px 1px 0 #000;
 }
+body {
+    background-image: url("../../resources/GaturroViciandoPes.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#dentroCaja {
+    font-family: 'Sanchez', serif;
+    font-size: 21px;
+    color: #000000;
+    background-color:#f7af21d7;
+    width: 1000px;
+    border: 15px solid rgba(23, 82, 23, 0.877);
+    padding: 50px;
+    margin: auto;
+}
 
 #seleccion {
     background-color: rgba(60, 212, 55, 0.863);
+}
+
+
+#titulo2 {
+    font-family: 'Sancreek', cursive;
+    font-size:30px;
+    color:black;
 }
