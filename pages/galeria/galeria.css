@@ -1,3 +1,14 @@
+body {
+    background-image: url("../../resources/AldosiviWallpaperPero4k.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.page img {
+    box-shadow: 7px 7px 15px black;
+    margin-bottom: 20px;
+}
+
 #titulo {
     font-family: 'Sancreek', cursive;
     font-size:25px;
