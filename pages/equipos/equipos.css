@@ -1,0 +1,73 @@
+#titulo {
+    font-family: 'Sancreek', cursive;
+    font-size:25px;
+    color:black;
+}
+
+.barra_menu {
+    font-family: 'Sanchez', serif;
+    font-size: 25px;
+    color: #fab62d;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+#RectanguloAmarillo
+{
+    background: #E0D700;
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+    font-family: Sanchez;
+    
+}
+
+#NuestrasLeonasI
+{
+    width: 80%; 
+    height: 80%;
+}
+
+#ProvincialBasquetI
+{
+    width: 88%;
+    height: 88%;
+}
+
+body {
+    background-image: url("../../resources/AldosiviWallpaperPeroNo4k.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*Ideas Muertas*/
+
+/*#RectanguloAmarillo
+{ 
+    position: relative;
+    width: 837px; 
+    width 100%;
+    height: 94px;
+    height auto;
+    left: 301px;
+    top: 149px;
+    background: #E0D700;
+}*/ 
+
+/* @media screen and (min-width: 801px) {
+    h1{ 
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    h1{ 
+        font-size: 20px;
+    }
+} */
