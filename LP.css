@@ -1,0 +1,23 @@
+#estadio{
+    background-image: url("resources/Estadio_jose.jpg");
+    background-repeat: no-repeat;
+    background-attachment: local, scroll;
+    background-size: cover;
+}
+
+#titulo {
+    font-family: 'Sancreek', cursive;
+    font-size:25px;
+    color:black;
+}
+
+.barra_menu {
+    font-family: 'Sanchez', serif;
+    font-size: 25px;
+    color: #fab62d;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
