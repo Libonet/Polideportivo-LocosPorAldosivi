@@ -4,6 +4,12 @@
     color:black;
 }
 
+#subtitulo{
+    font-family: 'Sanchez', serif;
+    font-size: 25px;
+    color: black
+}
+
 .barra_menu {
     font-family: 'Sanchez', serif;
     font-size: 25px;
@@ -18,6 +24,7 @@
 #RectanguloAmarillo
 {
     background: #E0D700;
+    box-shadow: 7px 7px 13px black;
 }
 
 h1 {
