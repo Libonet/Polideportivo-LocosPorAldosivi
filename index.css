@@ -16,18 +16,24 @@
     color:black;
 }
 
-#botones{
+#barra{
     background-image: url("resources/AldosiviWallpaperPeroNo4k.jpg");
     background-repeat: no-repeat;
     background-attachment: local, scroll;
     background-size: cover;
-    height:100px;
-    padding-top:30px;
+}
+
+#reserva{
+    font-family: 'Sanchez', cursive;
+    font-size:40px;
+    color: #2ebd46;
+    font-weight: bolder;
+    background-color: rgb(204, 46, 7);
 }
 
 .barra_menu {
     font-family: 'Sanchez', serif;
-    font-size: 25px;
+    font-size: 30px;
     color: #fab62d;
     text-shadow:
     -1px -1px 0 #000,
