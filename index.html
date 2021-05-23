@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-quarterors-2019.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Sancreek&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
     <link rel="stylesheet" href="index.css">
-    <script type="text/javascript" src="script.js"></script>
     <link rel="shortcut icon" href="resources/EnanitoVerde.png">
 </head>
 
@@ -40,18 +39,100 @@
         <br>
     </div>
 
-    <!-- Tabla de clasificacion -->
+    
     <div id="estadio" class="w3-bar">
         <!-- formulario -->
-        <div class="w3-row vertical-center">
+        <div class="w3-row">
             <div class="w3-container w3-third w3-center">
-                <button onclick="document.getElementById('id01').style.display='block'" class="w3-button" id="reserva">Reservá una cancha</button>
+                <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn" id="reserva">Reservá una cancha</button>
             <div id="id01" class="w3-modal">
                 <div class="w3-modal-content">
                     <div class="w3-container">
                         <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                        <p>Acá tenemos que poner el formulario per sé</p>
-                        <br><br><br><br><br><br><br><br><br><br><br><br>
+                        <br>
+                        <br>
+                        <form class="w3-container">
+                            <div class="w3-row-padding">    
+                                <div class="w3-quarter">
+                                    <span class="w3-left">Nombre *</span>
+                                    <input id="inputform" class="w3-input w3-light-grey" type="text">
+                                </div>
+                                <div class="w3-quarter">
+                                    <span class="w3-left">Apellido *</span>
+                                    <input id="inputform" class="w3-input w3-light-grey" type="text">
+                                </div>
+                                <div class="w3-col" style="width:50px">
+                                    <p></p>
+                                </div>
+                                <div class="w3-rest">
+                                    <span class="w3-left">Tipo de cancha *</span>
+                                    <select class="w3-select w3-light-grey" name="option">
+                                        <option value="" disabled selected>Elija una opcion</option>
+                                        <option value="1">Futbol5</option>
+                                        <option value="2">Basquet</option>
+                                        <option value="3">Volley</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="w3-row-padding">
+                                <div class="w3-col" style="width: 40%;">
+                                    <span class="w3-left">Nombre del equipo</span>
+                                    <input id="inputform" class="w3-input w3-light-grey" type="text">
+                                </div>
+                                <div class="w3-col" style="width:150px">
+                                    <p></p>
+                                </div>
+                                <div class="w3-col" style="width: 40%;">
+                                    <span class="w3-left">Nombre del equipo rival</span>
+                                    <input id="inputform" class="w3-input w3-light-grey" type="text">
+                                </div>
+                            </div>
+                            <div class="w3-row-padding">
+                                <div class="w3-col" style="width: 40%;">
+                                    <span class="w3-left">Email *</span>
+                                    <input id="inputform" class="w3-input w3-light-grey" type="text">
+                                </div>
+                                <div class="w3-col" style="width:150px">
+                                    <p></p>
+                                </div>
+                                <div class="w3-col" style="width: 40%;">
+                                    <span class="w3-left">Fecha a reservar *</span>
+                                    <input id="inputform" class="w3-input w3-light-grey" type="date">
+                                </div>
+                            </div>
+                            <div class="w3-row-padding">
+                                <div class="w3-col" style="width: 40%;">
+                                    <span class="w3-left">Teléfono *</span>
+                                    <input id="inputform" class="w3-input w3-light-grey" type="text">
+                                </div>
+                            </div>
+                            <div class="w3-row-padding">
+                                <div class="w3-col" style="width: 20%;">
+                                    <span class="w3-left" style="text-align: left;">Cantidad de jugadores por equipo</span>
+                                    <input id="inputform" class="w3-input w3-light-grey" type="text">
+                                </div>
+                            </div>
+                            <span class="w3-left">* campos requeridos</span>
+                            <button id="enviar" class="w3-right">Enviar</button>
+                        </form>
+                        <br>
+                        <!-- texto contacto -->
+                        <div id="dentroCaja">
+                            Cómo contactarnos?
+                            Podés comunicarte por cualquier pregunta en todo momento a nuestro whatsapp: <br>
+                            +54 9 233 2737382<br> 
+                            A nuestro fijo 
+                            4403928<br>
+                            <br>
+                            o a nuestro correo electrónico <br>
+                            LocosPorAldosivi@outlook.com<br>
+                            <br><br>
+                            Para inscribirte como socio, tenés que venir presencialmente al predio.
+                            <br><br>
+                            No dejés de buscarnos en Instagram y Twitter en
+                            @LocosPorAldosiviOK
+                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -62,12 +143,13 @@
             <!-- nuestros equipos -->
             <div class="w3-container w3-third w3-center">
                 <a href="pages/equipos/equipos.html" >
-                <button class="w3-button" id="reserva">
+                <button class="w3-btn" id="reserva">
                     Nuestros Equipos
                 </button>
                 </a>
             </div>
         </div>
+        <!-- Tabla de clasificacion -->
         <div class="w3-row">
             <div class="w3-container w3-quarter">
                 <p></p>

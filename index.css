@@ -24,11 +24,15 @@
 }
 
 #reserva{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 20px;
     font-family: 'Sanchez', cursive;
     font-size:40px;
-    color: #2ebd46;
+    color: #2b1055;
     font-weight: bolder;
-    background-color: rgb(204, 46, 7);
+    background-color: white;
 }
 
 .barra_menu {
@@ -40,4 +44,44 @@
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+
+.w3-modal-content{
+    color: black;
+    background-image: url(resources/GarfieldHaciendoJueguito.png);
+    background-repeat: no-repeat;
+    background-attachment: local, scroll;
+    background-size: cover;
+    width: 1200px;
+}
+
+#dentroCaja {
+    font-family: 'Sanchez', serif;
+    font-size: 15px;
+    color: #000000;
+    text-align: left;
+    font-weight: bold;
+}
+
+span.w3-left{
+    font-family: 'Sanchez', serif;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+#inputform{
+    box-shadow: 0px 1px 13px black;
+    border-radius: 5px;
+}
+
+#enviar{
+    width: 10%;
+    background-color: lightgray;
+    color: black;
+    font-family: 'Sanchez', serif;
+    font-size: 30px;
+    padding-right: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px black;
 }

@@ -48,6 +48,12 @@ body {
     }
 }
 
+#RectanguloAmarillo
+{
+    background: #E0D700;
+    box-shadow: 7px 7px 13px black;
+}
+
 /* Estilo de las imagenes */
 .page img {
     box-shadow: 7px 7px 15px black;
