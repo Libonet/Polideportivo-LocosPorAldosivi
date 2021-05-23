@@ -17,22 +17,57 @@
 </head>
 
 <body class="w3-dark-gray">
-	<div id="estadio" class="w3-bar">
-        <div class="w3-bar-item">
-            <img src="resources/poli_deportivo.png" width="75px" height="75px">
+    <!-- Formulario y nuestros equipos -->
+    <div id="barra">
+        <!-- Barra de navegacion -->
+        <div class="w3-bar">
+            <div class="w3-bar-item">
+                <img src="resources/poli_deportivo.png" width="75px" height="75px">
+            </div>
+            <div class="w3-bar-item">
+                <span id="titulo">
+                    Polideportivo<br>
+                    Locos por Aldosivi
+                </span>
+            </div>
+            <a href="index.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">
+                <img src="resources/home_black_48dp.svg">
+            </a>
+            <a href="pages/nosotros/nosotros.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Sobre Nosotros</a>
+            <a href="pages/contacto/contacto.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Contacto</a>
+            <a href="pages/galeria/galeria.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Galeria</a>
         </div>
-		<div class="w3-bar-item">
-            <span id="titulo">
-                Polideportivo<br>
-                Locos por Aldosivi
-            </span>
+        <br>
+    </div>
+
+    <!-- Tabla de clasificacion -->
+    <div id="estadio" class="w3-bar">
+        <!-- formulario -->
+        <div class="w3-row vertical-center">
+            <div class="w3-container w3-third w3-center">
+                <button onclick="document.getElementById('id01').style.display='block'" class="w3-button" id="reserva">Reservá una cancha</button>
+            <div id="id01" class="w3-modal">
+                <div class="w3-modal-content">
+                    <div class="w3-container">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <p>Acá tenemos que poner el formulario per sé</p>
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="w3-container w3-third">
+                <p></p>
+            </div>
+            <!-- nuestros equipos -->
+            <div class="w3-container w3-third w3-center">
+                <a href="pages/equipos/equipos.html" >
+                <button class="w3-button" id="reserva">
+                    Nuestros Equipos
+                </button>
+                </a>
+            </div>
         </div>
-        <a href="index.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">
-            <img src="resources/home_black_48dp.svg">
-        </a>
-        <a href="pages/nosotros/nosotros.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Sobre Nosotros</a>
-        <a href="pages/contacto/contacto.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Contacto</a>
-        <a href="pages/galeria/galeria.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Galeria</a>
         <div class="w3-row">
             <div class="w3-container w3-quarter">
                 <p></p>
@@ -57,28 +92,8 @@
         </div>
         <br>
     </div>
-    <div id="botones" >
-        <div class="w3-row vertical-center">
-            <div class="w3-container w3-third w3-center">
-                <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Reservá una cancha</button>
-               <div id="id01" class="w3-modal">
-                <div class="w3-modal-content">
-                    <div class="w3-container">
-                        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                        <p>Acá tenemos que poner el formulario per sé</p>
-                        <br><br><br><br><br><br><br><br><br><br><br><br>
-                    </div>
-                </div>
-              </div>
-            </div>
-            <div class="w3-container w3-third">
-                <p></p>
-            </div>
-            <div class="w3-container w3-third w3-center">
-                
-            </div>
-        </div>
-    </div>
+
+    <!-- Noticias -->
     <div class="w3-row">
     <div class="w3-container w3-quarter">
         <p></p>
