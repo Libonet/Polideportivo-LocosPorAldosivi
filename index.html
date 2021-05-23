@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-quarterors-2019.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Sancreek&display=swap" rel="stylesheet">
@@ -13,10 +13,11 @@
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
     <link rel="stylesheet" href="index.css">
     <script type="text/javascript" src="script.js"></script>
+    <link rel="shortcut icon" href="resources/EnanitoVerde.png">
 </head>
 
 <body class="w3-dark-gray">
-	<div class="w3-bar">
+	<div id="estadio" class="w3-bar">
         <div class="w3-bar-item">
             <img src="resources/poli_deportivo.png" width="75px" height="75px">
         </div>
@@ -26,15 +27,117 @@
                 Locos por Aldosivi
             </span>
         </div>
-		<a href="index.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">
+        <a href="index.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">
             <img src="resources/home_black_48dp.svg">
         </a>
-		<a href="pages/nosotros/nosotros.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Sobre Nosotros</a>
-		<a href="pages/contacto/contacto.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Contacto</a>
-		<a href="pages/galeria/galeria.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Galeria</a>
+        <a href="pages/nosotros/nosotros.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Sobre Nosotros</a>
+        <a href="pages/contacto/contacto.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Contacto</a>
+        <a href="pages/galeria/galeria.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Galeria</a>
+        <div class="w3-row">
+            <div class="w3-container w3-quarter">
+                <p></p>
+            </div>
+            <div class="w3-container w3-half" >
+                <h1 id="otitulo" class="w3-center">Tabla de clasificaciones:</h1>
+            </div>
+            <div class="w3-container w3-quarter">
+                <p></p>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-container w3-third w3-center">
+                <img src="resources/tabla-1.jpeg" width= 100% >
+            </div>
+            <div class="w3-container w3-third">
+                <p></p>
+            </div>
+            <div class="w3-container w3-third w3-center">
+                <img src="resources/tabla-2.jpeg" width= 100% >
+            </div>
+        </div>
+        <br>
     </div>
-    <div>
-        <h1>Landing Page</h1>
+    <div id="botones" >
+        <div class="w3-row vertical-center">
+            <div class="w3-container w3-third w3-center">
+                <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Reservá una cancha</button>
+               <div id="id01" class="w3-modal">
+                <div class="w3-modal-content">
+                    <div class="w3-container">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <p>Acá tenemos que poner el formulario per sé</p>
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="w3-container w3-third">
+                <p></p>
+            </div>
+            <div class="w3-container w3-third w3-center">
+                
+            </div>
+        </div>
+    </div>
+    <div class="w3-row">
+    <div class="w3-container w3-quarter">
+        <p></p>
+    </div>
+    <div class="w3-container w3-half" >
+        <h1 id="otitulo" class="w3-center">Mantenete informado:</h1>
+    </div>
+    <div class="w3-container w3-quarter">
+        <p></p>
+    </div>
+    </div>
+    <div class="w3-center">
+            <a href="https://www.ole.com.ar/" target="_blank" rel="noopener noreferrer">
+                <img src="resources/Diario_ole_logo.png" width= 25%>
+            </a>
+    </div>
+    <div class="w3-center">
+            <a href="https://www.futbolargentino.com/" target="_blank" rel="noopener noreferrer">
+                <svg version="1.1" x="0px" y="0px" viewBox="0 0 331.3 44" style="enable-background:new 0 0 331.3 44;" fill="#fff" width=60% xml:space="preserve"><polygon points="274.3,37.6 278.3,37.6 277.2,42 273.2,42"></polygon><path d="M37.4,11.5l1.4-5.2H24.4c-0.2,0-0.3,0-0.5,0l0,0c-2.6,0-5.8-0.1-7.2,0.3c-1.2,0.3-2.5,0.7-3.6,1.2l-1.7,2.4
+                    c-0.1,0.2-0.2,0.3-0.3,0.5c0.9-0.8,1.9-1.6,3-2.1l0.2-0.1l0.2,0c2.3,0.3,3.7,0.5,6,0.8l0.6,0.1l0.4,0.1l2.2-1.2l-0.8,3.2h0
+                    c0.3,0,0.6,0.1,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9l-2,7.5l-1.3,0l-1.4,5.2c0.3,0,0.6,0.1,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9l-2.8,10.7
+                    c-0.1-0.2-0.3-0.5-0.4-0.7l-0.4-0.7l-8.1-0.6l-0.2-0.2c-0.7-0.7-1.4-1.6-1.9-2.5C6.9,33.9,7.3,35,7.8,36l0.1,0.1l0,0.2
+                    c0,0.3,0,0.7,0,1l0,0.2c0.9,0.9,1.9,1.7,3,2.4c1.6,1,3.5,1.7,5.3,2.2l0,0h5.2l4.4-16.6h6.5l1.4-5.2h0l-6.5,0l2.3-8.8H37.4z"></path><path d="M5,27.3l0.1-0.2c1.2-1.9,2.6-3.8,3.8-5.8L9.2,21l0.1-0.1l-1.6-5.3l0.1-0.3C7.9,15.1,8,15,8.1,14.8
+                    c0.5-0.9,1.1-1.8,1.8-2.7l0,0c-0.8,0.6-1.5,1.3-2.2,2c-0.2,0.2-0.4,0.4-0.6,0.6L6.9,15l-0.4,0c-0.2,0-0.3,0-0.5,0l-0.7,0l-0.2,0
+                    c-1.2,2-2,4.1-2.4,6.4c-0.3,1.7-0.3,3.4-0.2,5.1l1.6,1l0.1,0.3c0.3,1.2,0.8,2.4,1.5,3.5C5.3,30,5,28.8,5,27.5L5,27.3z"></path><path d="M20.2,25.8c-0.2-0.3-0.5-0.4-0.8-0.4l1.4-5.2l1.3,0l1.7-6.4c-0.4-1.4-1-2.7-1.8-3.9l-0.2-0.3l0,0
+                    c0.7,1.8,0.9,3.6,0.7,5.5l0,0.3l-5.9,5l-0.3,0c-1.6-0.2-3.3-0.1-4.9,0.2c-0.4,0.1-0.8,0.2-1.2,0.3c0.5,0,1,0.1,1.5,0.2
+                    c1.5,0.2,2.9,0.7,4.2,1.2l0.3,0.1l3.5,6.7l-0.1,0.3c-0.3,1-0.6,2-1,2.9c-0.4,0.9-0.8,1.8-1.2,2.7c-0.1,0.2-0.2,0.3-0.3,0.5
+                    c0.1-0.1,0.2-0.2,0.4-0.4c0.3-0.3,0.7-0.7,1-1l2-7.4C20.4,26.4,20.4,26.1,20.2,25.8"></path><path d="M43.9,36.8H40L48,6.2l-6.5,0l-1.4,5.2c0.3,0,0.6,0.1,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9l-7,26.7
+                    c-0.2,0.7-0.1,1.4,0.3,1.8c0.4,0.5,1,0.8,1.6,0.8h9.1c0.7,0,1.4-0.3,2-0.8c0.6-0.5,1.1-1.2,1.2-1.8l8.8-33.2h-5.2L43.9,36.8z"></path><path d="M217.3,11.5h3.3c0.3,0,0.6,0.1,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9L213.8,42h5.2l8-30.5h4.5l1.4-5.2h-14.3
+                    L217.3,11.5z"></path><path d="M58.3,11.5h3.3c0.3,0,0.6,0.1,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9L54.8,42H60l8.1-30.5h4.6L74,6.2H59.7L58.3,11.5
+                    z"></path><path d="M251.7,23.9l0.7-17.6H246l-1.4,5.2c0.3,0,0.6,0.1,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9L237.8,42h5.2l4.6-17.6
+                    L247,42h5.2l9.4-35.7h-5.2L251.7,23.9z"></path><path d="M206.1,23.9l0.7-17.6h-6.5l-1.4,5.2c0.3,0,0.6,0.1,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9L192.2,42h5.2l4.6-17.6
+                    L201.3,42h5.2l9.4-35.7h-5.2L206.1,23.9z"></path><path d="M159.7,6.3h-13l-1.4,5.2h0c0.3,0,0.6,0.1,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9l-3,11.3H142l-1.4,5.2
+                    c0.3,0,0.6,0.1,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9l-3,11.3h5.2l3.3-12.6h0.3l0.4,12.6h5.1l-0.4-12.6h1c0.7,0,1.4-0.3,2-0.8
+                    c0.6-0.5,1.1-1.2,1.2-1.8l4.7-17.8c0.2-0.7,0.1-1.4-0.3-1.8C161,6.6,160.4,6.3,159.7,6.3 M155.4,12.8l-3,11.3h-3.9l3.3-12.6h2.6
+                    c0.3,0,0.6,0.1,0.8,0.4C155.4,12.2,155.5,12.5,155.4,12.8"></path><path d="M277.3,6.3l-13,0l-1.4,5.2c0.3,0,0.6,0.1,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9l-7,26.6c-0.2,0.7-0.1,1.4,0.3,1.8
+                    c0.4,0.5,1,0.8,1.6,0.8h9.1c0.7,0,1.4-0.3,2-0.8c0.6-0.5,1.1-1.2,1.2-1.8l8-30.5c0.2-0.7,0.1-1.4-0.3-1.8
+                    C278.6,6.6,278,6.3,277.3,6.3 M273,12.8l-6.3,24h-3.9l6.7-25.3h2.6c0.3,0,0.6,0.1,0.8,0.4C273,12.2,273,12.5,273,12.8"></path><path d="M107.6,6.2l-13,0l-1.4,5.2c0.3,0,0.6,0.1,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9l-7,26.6c-0.2,0.7-0.1,1.4,0.3,1.8
+                    c0.4,0.5,1,0.8,1.6,0.8h9.1c0.7,0,1.4-0.3,2-0.8c0.6-0.5,1.1-1.2,1.2-1.8l8.1-30.5c0.2-0.7,0.1-1.4-0.3-1.8
+                    C108.9,6.5,108.3,6.2,107.6,6.2 M103.3,12.8l-6.3,24H93l6.7-25.3h2.6c0.3,0,0.6,0.1,0.8,0.4C103.3,12.1,103.4,12.4,103.3,12.8"></path><path d="M104.6,42h11.7l1.4-5.2h-6.5l8.1-30.5h-6.5l-1.4,5.2c0.3,0,0.6,0.1,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9L104.6,42z
+                    "></path><path d="M235.4,11.5c0.3,0,0.6,0.1,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9L228.6,42h5.2l9.4-35.7h-6.5L235.4,11.5z"></path><path d="M191.3,25.5l1.4-5.2h0l-6.5,0l2.3-8.7h0.1h7.7l1.4-5.2h-14.3l-1.4,5.2c0.3,0,0.6,0.1,0.8,0.4
+                    c0.2,0.3,0.2,0.6,0.1,0.9l-2,7.4l-1.3,0l-1.4,5.2c0.3,0,0.6,0.1,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9l-4,15.2h13l1.4-5.2h-7.8l3-11.3
+                    H191.3z"></path><path d="M89.5,6.2l-13,0l-1.4,5.2c0.3,0,0.6,0.1,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9l-2,7.5h-1.3l-1.4,5.2
+                    c0.3,0,0.6,0.1,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9l-4,15.3h11.7c0.7,0,1.4-0.3,2-0.8c0.6-0.5,1.1-1.2,1.2-1.8l3.7-14
+                    c0.2-0.7,0.1-1.4-0.3-1.8c-0.4-0.5-1-0.8-1.6-0.8c0.7,0,1.4-0.3,2-0.8c0.6-0.5,1.1-1.2,1.2-1.8l3-11.4C91.8,7.4,91,6.2,89.5,6.2
+                    M81.5,26.7l-2.7,10.1H75l3-11.4l2.6,0c0.3,0,0.6,0.1,0.8,0.4C81.6,26.1,81.6,26.4,81.5,26.7 M85.2,12.8l-2,7.4h0h-1.5h-2.4
+                    l2.3-8.8l2.6,0c0.3,0,0.6,0.1,0.8,0.4C85.2,12.1,85.3,12.4,85.2,12.8"></path><path d="M123.3,31.6h-2.2l-1.4,5.2h0.2c0.3,0,0.5,0.1,0.7,0.3c0.1,0.2,0.1,0.5,0,0.8l-1.7,4.1h5.3l2.1-5.2h3.8
+                    c0.3,0,0.6,0.1,0.8,0.3c0.2,0.2,0.3,0.5,0.2,0.8l-0.5,4.1h5.3l3.6-35.8h-5.3L123.3,31.6z M131.8,31.6h-3.4l4.8-11.7L131.8,31.6z"></path><path d="M170.4,20.3l-1.4,5.2h0c0.3,0,0.6,0.1,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9l-2.6,10h-3.9l6.7-25.3h2.6
+                    c0.3,0,0.6,0.1,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9l-0.7,2.6h5.2l1.7-6.5c0.2-0.7,0.1-1.4-0.3-1.8c-0.4-0.5-1-0.8-1.6-0.8h-13
+                    l-1.4,5.2c0.3,0,0.6,0.1,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9l-7,26.6c-0.2,0.7-0.1,1.4,0.3,1.8c0.4,0.5,1,0.8,1.6,0.8h9.1
+                    c0.7,0,1.4-0.3,2-0.8c0.6-0.5,1.1-1.2,1.2-1.8l5-19.1H170.4z"></path><polygon points="49.9,1 48.6,6.2 51.4,6.2 54.2,1 	"></polygon><path d="M308.3,18.3L303,38.4c-0.7,2.8-2.4,4.1-6,4.1c-3.6,0-4.6-1.3-3.9-4.1l5.3-20.1c0.7-2.8,2.4-4.1,6-4.1
+                    C308.1,14.2,309,15.5,308.3,18.3 M304.3,18.5c0.2-0.7-0.1-1-0.7-1c-0.6,0-1,0.2-1.2,1l-5.2,19.7c-0.2,0.7,0.1,1,0.7,1
+                    c0.6,0,1-0.2,1.2-1L304.3,18.5z"></path><path d="M324.5,14.2c-1.3,0-2.4,0.4-3.2,1.2c-0.3-0.8-1.1-1.2-2.7-1.2c-1.5,0-2.7,0.5-3.5,1.6l0-1.1h-2.9l0,0h-0.6
+                    l-0.7,2.5c0.2,0,0.3,0.1,0.4,0.2c0.1,0.1,0.1,0.3,0.1,0.4L304.9,42h4l6.2-23.5c0.2-0.7,0.6-1,1.2-1c0.6,0,0.9,0.2,0.7,1L310.8,42h4
+                    l6.2-23.5c0.2-0.7,0.6-1,1.2-1c0.6,0,0.9,0.2,0.7,1L316.7,42h4l6.3-23.9C327.6,15.5,327.3,14.2,324.5,14.2"></path><path d="M286.9,36.3l-0.5,1.8c-0.2,0.7-0.6,1-1.2,1c-0.6,0-0.9-0.2-0.7-1l5.2-19.7c0.2-0.7,0.6-1,1.2-1
+                    c0.6,0,0.9,0.2,0.7,1l-0.6,2.4h4l0.7-2.7c0.7-2.8-0.2-4.1-3.9-4.1c-3.6,0-5.3,1.3-6,4.1l-5.2,20.1c-0.7,2.8,0.2,4.1,3.9,4.1
+                    c3.6,0,5.3-1.3,6-4.1l0.5-2H286.9z"></path>
+                </svg>
+            </a>
     </div>
 </body>
 </html>

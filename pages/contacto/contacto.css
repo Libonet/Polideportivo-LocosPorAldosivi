@@ -23,10 +23,11 @@ body {
 
 #dentroCaja {
     font-family: 'Sanchez', serif;
-    font-size: 21px;
+    font-size: 28px;
     color: #000000;
-    background-color:#f7af21d7;
-    width: 1000px;
+    background-color:#f5b026d0;
+    width: 1200px;
+    height:700px;
     border: 15px solid rgba(23, 82, 23, 0.877);
     padding: 50px;
     margin: auto;
