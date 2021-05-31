@@ -10,9 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Sancreek&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
     <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" href="resources/EnanitoVerde.png">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script type="text/javascript" src="funciones.js"></script>
 </head>
 
 <body class="w3-dark-gray">
@@ -51,15 +52,16 @@
                         <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                         <br>
                         <br>
-                        <form class="w3-container">
+                        <form class="w3-container" id="registro" name="registro">
+                            <!-- Nombre, apellido y tipo de cancha -->
                             <div class="w3-row-padding">    
                                 <div class="w3-quarter">
                                     <span class="w3-left">Nombre *</span>
-                                    <input id="inputform" class="w3-input w3-light-grey" type="text">
+                                    <input id="inputform" class="w3-input w3-light-grey" type="text" type="submit" name="nombre">
                                 </div>
                                 <div class="w3-quarter">
                                     <span class="w3-left">Apellido *</span>
-                                    <input id="inputform" class="w3-input w3-light-grey" type="text">
+                                    <input id="inputform" class="w3-input w3-light-grey" type="text" type="submit" name="apellido">
                                 </div>
                                 <div class="w3-col" style="width:50px">
                                     <p></p>
@@ -74,23 +76,25 @@
                                     </select>
                                 </div>
                             </div>
+                            <!-- Nombre de los equipos -->
                             <div class="w3-row-padding">
                                 <div class="w3-col" style="width: 40%;">
                                     <span class="w3-left">Nombre del equipo</span>
-                                    <input id="inputform" class="w3-input w3-light-grey" type="text">
+                                    <input id="inputform" class="w3-input w3-light-grey" type="text" name="partidario">
                                 </div>
                                 <div class="w3-col" style="width:150px">
                                     <p></p>
                                 </div>
                                 <div class="w3-col" style="width: 40%;">
                                     <span class="w3-left">Nombre del equipo rival</span>
-                                    <input id="inputform" class="w3-input w3-light-grey" type="text">
+                                    <input id="inputform" class="w3-input w3-light-grey" type="text" name="rival">
                                 </div>
                             </div>
+                            <!-- Email y fecha a reservar -->
                             <div class="w3-row-padding">
                                 <div class="w3-col" style="width: 40%;">
                                     <span class="w3-left">Email *</span>
-                                    <input id="inputform" class="w3-input w3-light-grey" type="text">
+                                    <input id="inputform" class="w3-input w3-light-grey" type="text" type="submit" name="email">
                                 </div>
                                 <div class="w3-col" style="width:150px">
                                     <p></p>
@@ -100,20 +104,21 @@
                                     <input id="inputform" class="w3-input w3-light-grey" type="date">
                                 </div>
                             </div>
+                            <!-- Teléfono y cantidad de jugadores por equipo -->
                             <div class="w3-row-padding">
                                 <div class="w3-col" style="width: 40%;">
                                     <span class="w3-left">Teléfono *</span>
-                                    <input id="inputform" class="w3-input w3-light-grey" type="text">
+                                    <input id="inputform" class="w3-input w3-light-grey" type="text" type="submit" name="telefono">
                                 </div>
                             </div>
                             <div class="w3-row-padding">
                                 <div class="w3-col" style="width: 20%;">
                                     <span class="w3-left" style="text-align: left;">Cantidad de jugadores por equipo</span>
-                                    <input id="inputform" class="w3-input w3-light-grey" type="text">
+                                    <input id="inputform" class="w3-input w3-light-grey" type="text" name="can.jugadores">
                                 </div>
                             </div>
                             <span class="w3-left">* campos requeridos</span>
-                            <button id="enviar" class="w3-right">Enviar</button>
+                            <button id="enviar" name="enviar" type="submit" class="w3-right">Enviar</button> <!-- Supuestamente esto lanza la función en el .js, donde toma el nombre del fomulario, que está en la línea 55-->
                         </form>
                         <br>
                         <!-- texto contacto -->
