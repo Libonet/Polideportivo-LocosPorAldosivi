@@ -2,9 +2,11 @@
 $(function() {
     console.log('JQuery is Working');
     
-    // Que capture el imput con el nombre search, y que cuando se escriba arranque la función
-    $('#nombre').keyup( function() { 
+    // Que capture cuando se hace un submit desde el form ReservaDeCancha (esto lo hace el botón Enviar)
+    $("#ReservaDeCancha").submit(function(e) {
         let nombre = $('#nombre').val() // Desde ese mismo elemento (u objeto?) quiero obtener el valor
+        var str = $(this).serialize(); // Captura los valores ingresados con sus respectivos campos separados por "&&"
+        console.log(str);
         $.ajax({
             url: 'formulario.php',
             type: 'POST',
@@ -20,13 +22,14 @@ $(function() {
                 alert(respuesta);
             }
         })
-    })
+        e.preventDefault(); // Esto permite que la página no vuelva a la landing page, acción que ocurre por default
+    });
 });
 
 // $(document).ready(function(){
     
 //     // Registro Email
-//     $("#registro").submit(function(e) {
+//     $("#ReservaDeCancha").submit(function(e) {
 //         e.preventDefault();
 //         var data = new FormData(this);
 //         $.ajax({

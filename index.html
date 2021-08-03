@@ -12,8 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" href="resources/EnanitoVerde.png">
-    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
-    <!-- <script type="text/javascript" src="funciones.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="funciones.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -45,7 +45,6 @@
 
     
     <div id="estadio" class="w3-bar">
-        <!-- formulario -->
         <div class="w3-row">
             <div class="w3-container w3-third w3-center">
                 <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn" id="reserva">Reservá una cancha</button>
@@ -55,16 +54,17 @@
                         <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                         <br>
                         <br>
-                        <form class="w3-container" id="registro" name="registro">
+                        <!-- formulario -->
+                        <form class="w3-container" id="ReservaDeCancha">
                             <!-- Nombre, apellido y tipo de cancha -->
                             <div class="w3-row-padding">    
                                 <div class="w3-quarter">
                                     <span class="w3-left">Nombre *</span>
-                                    <input id="nombre" class="w3-input w3-light-grey" type="text" type="submit" name="nombre">
+                                    <input id="nombre" class="w3-input w3-light-grey" type="text" name="nombre">
                                 </div>
                                 <div class="w3-quarter">
                                     <span class="w3-left">Apellido *</span>
-                                    <input id="apellido" class="w3-input w3-light-grey" type="text" type="submit" name="apellido">
+                                    <input id="apellido" class="w3-input w3-light-grey" type="text" name="apellido">
                                 </div>
                                 <div class="w3-col" style="width:50px">
                                     <p></p>
@@ -97,7 +97,7 @@
                             <div class="w3-row-padding">
                                 <div class="w3-col" style="width: 40%;">
                                     <span class="w3-left">Email *</span>
-                                    <input id="email" class="w3-input w3-light-grey" type="text" type="submit" name="email">
+                                    <input id="email" class="w3-input w3-light-grey" type="text" name="email">
                                 </div>
                                 <div class="w3-col" style="width:150px">
                                     <p></p>
@@ -111,7 +111,7 @@
                             <div class="w3-row-padding">
                                 <div class="w3-col" style="width: 40%;">
                                     <span class="w3-left">Teléfono *</span>
-                                    <input id="telefono" class="w3-input w3-light-grey" type="text" type="submit" name="telefono">
+                                    <input id="telefono" class="w3-input w3-light-grey" type="text" name="telefono">
                                 </div>
                             </div>
                             <div class="w3-row-padding">
@@ -122,9 +122,7 @@
                             </div>
                             <span class="w3-left">* campos requeridos</span>
                             <body>
-                                <button type="submit" class="w3-right">Enviar</button>
-                                <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-                                <script src="funciones.js"></script>
+                                <button id="enviar" type="submit" class="w3-right">Enviar</button>
                             </body>
                         </form>
                         <br>

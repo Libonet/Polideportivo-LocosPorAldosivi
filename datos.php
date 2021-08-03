@@ -1,29 +1,16 @@
 <?php
-// include "variables.ini";
 
-// $connection = mysqli_connect(
-//     "localhost",
-//     "nuevenue",
-//     "nueve990",
-//     "nueve"
-// );
+// Conexión a la base de datos
+$connection = new mysqli("localhost","nuevenue","nueve990","nueve");
 
-// if ($connection) {
-//     echo "Database is connected";
-// }
-// else {
-//     die('Could not connect: ' . $connection -> connect_error); // Esto aparece, pero no muestra nada, por lo que no hay error???
-// }
-
-$mysqli = new mysqli("3.130.9.8","nuevenue","nueve990", "nueve");
-
-// Check connection
-if ($mysqli -> connect_error) {
-  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+// Comprobar conexión
+if ($connection -> connect_errnor) {
+  echo "Error al conectarse a la base de datos: " . $connection -> connect_error;
   exit();
 }
 else {
-  echo "Se conectó correctamente a la base de datos???";
+  // Nota: Solo se puede poner \n con doble comillas
+  echo "Se conectó correctamente a la base de datos\n";
 }
 
 // // Verificación de la existencia (o no) del email ingresado
