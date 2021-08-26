@@ -1,8 +1,22 @@
 <?php
-    include('datos.php');
+    
+    include('database.php');
 
-    $nombre = $_POST['nombre']; // Almacenar en la variable $nombre lo que se está recibiendo con el protocolo POST con el nombre "nombre"
-    echo $nombre;
+    // $campos = $_POST['campos']; // Almacenar en la variable $nombre lo que se está recibiendo con el protocolo POST con el nombre "nombre"
+    // $campos2 = $_POST['campos2'];
+    // $xd = preg_split('*&*', $campos2, -1);
+    // print_r($xd);
+    // // Recoger los valores codificados en un string a través de expresiones regulares:
+    // // De acá obtuve la info: https://stackoverflow.com/questions/5696412/how-to-get-a-substring-between-two-strings-in-php
+    // // https://www.php.net/manual/es/function.preg-match.php
+    // preg_match('/nombre=(.*?)&/',$campos2, $xd2);
+    // preg_match('/apellido=(.*?)&/',$campos2, $xd2);
+    // // preg_match('/option=(.*?)&/',$campos2, $xd2);
+    // $lol == ($xd2[1]);
+    // echo $campos[1];
+
+    echo $_POST['nombre'];
+    exit();
 
     // Si nombre no está vacio, procedo hacer una búsqueda en la base de datos
     if(!empty($nombre)) {
