@@ -48,7 +48,7 @@
 
 .w3-modal-content{
     color: black;
-    background-image: url(resources/GarfieldHaciendoJueguito.png);
+    /*background-image: url(resources/GarfieldHaciendoJueguito.png);*/
     background-repeat: no-repeat;
     background-attachment: local, scroll;
     background-size: cover;
