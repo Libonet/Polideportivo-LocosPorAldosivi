@@ -37,7 +37,7 @@
 
 .barra_menu {
     font-family: 'Sanchez', serif;
-    font-size: 30px;
+    font-size: 25px;
     color: #fab62d;
     text-shadow:
     -1px -1px 0 #000,
@@ -48,7 +48,7 @@
 
 .w3-modal-content{
     color: black;
-    background-image: url(resources/GarfieldHaciendoJueguito.png);
+    /*background-image: url(resources/GarfieldHaciendoJueguito.png);*/
     background-repeat: no-repeat;
     background-attachment: local, scroll;
     background-size: cover;
@@ -74,6 +74,25 @@ span.w3-left{
     box-shadow: 0px 1px 13px black;
     border-radius: 5px;
 }
+
+/* Este es nuestro diseño para los campos no válidos */
+input:invalid{
+    border-color: #900;
+    background-color: #FDD;
+  }
+
+/* Este es el diseño para nuestros mensajes de error */
+.error {
+    width : 100%;
+    padding: 0;
+  
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+  
+    box-sizing: border-box;
+  }
 
 #enviar{
     width: 10%;

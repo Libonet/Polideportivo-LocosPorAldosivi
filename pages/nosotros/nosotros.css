@@ -4,6 +4,10 @@
     color:black;
 }
 
+#seleccion {
+    background-color: rgba(39, 139, 36, 0.863);
+}
+
 .barra_menu {
     font-family: 'Sanchez', serif;
     font-size: 25px;
@@ -22,7 +26,7 @@
 }
 
 body {
-    background-image: url("../../resources/MessiGaturroAldosivi.png");
+    background-image: url("../../resources/MessiGaturroAldosivi.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -38,8 +42,4 @@ body {
     border: 15px solid rgba(23, 82, 23, 0.877);
     padding: 50px;
     margin: auto;
-}
-
-#seleccion {
-    background-color: rgba(60, 212, 55, 0.863);
 }
