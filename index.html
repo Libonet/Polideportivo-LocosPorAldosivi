@@ -57,23 +57,20 @@
                         <br>
                         <br>
                         <!-- formulario -->
-                        <!-- Voy a utlizar las herramientas que provee HTML para dar respuesta al usuario. Por lo que pude ver existe múltiples 
-                            formas de hacer esto, siendo un ejemplo con Javascript. Existe la posibilidad de utilizar además un plugin de JQuery -->
-                        <!-- Además, por lo que entiendo la verificación en HTML o JS es insegura ya que se puede bypasear con las herramientas del navegador. 
-                            Sin embargo, esta es nuestra primera página xd -->
+                        <!-- Ver nota HTML.1 - Luca -->
                         <form id="ReservaDeCancha" class="w3-container">
                             <!-- Nombre, apellido y tipo de cancha -->
                             <div class="w3-row-padding">    
                                 <div class="w3-quarter">
                                     <span class="w3-left">Nombre *</span>
-                                    <input id="nombre" class="w3-input w3-light-grey" type="text" name="nombre" 
+                                    <input type="text" id="nombre" name="nombre" class="w3-input w3-light-grey" 
                                     oninvalid="this.setCustomValidity('Por favor ingrese su nombre')"
                                     oninput="this.setCustomValidity('')" required/>
                                     <span class="error" aria-live="polite"></span> <!-- Como se muestra la ventana de error -->
                                 </div>
                                 <div class="w3-quarter">
                                     <span class="w3-left">Apellido *</span>
-                                    <input id="apellido" class="w3-input w3-light-grey" type="text" name="apellido" 
+                                    <input type="text" id="apellido" name="apellido" class="w3-input w3-light-grey" 
                                     oninvalid="this.setCustomValidity('Por favor ingrese su apellido')"
                                     oninput="this.setCustomValidity('')" required>
                                 </div>
@@ -82,7 +79,7 @@
                                 </div>
                                 <div class="w3-rest">
                                     <span class="w3-left">Tipo de cancha *</span>
-                                    <select class="w3-select w3-light-grey" name="option" id="cancha" 
+                                    <select id="cancha" name="cancha" class="w3-select w3-light-grey" 
                                     oninvalid="this.setCustomValidity('Por favor ingrese el tipo de cancha')"
                                     oninput="this.setCustomValidity('')" required>
                                         <option value="" disabled selected>Elija una opcion</option>
@@ -96,43 +93,31 @@
                             <div class="w3-row-padding">
                                 <div class="w3-col" style="width: 40%;">
                                     <span class="w3-left">Nombre del equipo</span>
-                                    <input id="partidario" class="w3-input w3-light-grey" type="text" name="partidario">
+                                    <input type="text" id="partidario" name="partidario" class="w3-input w3-light-grey">
                                 </div>
                                 <div class="w3-col" style="width:150px">
                                     <p></p>
                                 </div>
                                 <div class="w3-col" style="width: 40%;">
                                     <span class="w3-left">Nombre del equipo rival</span>
-                                    <input id="rival" class="w3-input w3-light-grey" type="text" name="rival">
+                                    <input type="text" id="rival" name="rival" class="w3-input w3-light-grey">
                                 </div>
                             </div>
                             <!-- Email y fecha a reservar -->
                             <div class="w3-row-padding">
                                 <div class="w3-col" style="width: 40%;">
                                     <span class="w3-left">Email *</span>
-                                        <input type="email" id="email" class="w3-input w3-light-grey" name="email" required
+                                        <input type="email" id="email" name="email" class="w3-input w3-light-grey" required
                                         oninput="setCustomValidity(''); 
                                         this.validity.valid ? '' : setCustomValidity(validity.typeMismatch ? 'Ingrese un correo valido' : 'Por favor ingrese su email')">
-                                        <!-- 'setCustomValidity no solo establece el mensaje, sino que también marca 
-                                        el campo como inválido. Para ver si el campo realmente lo es hay que restablecerlo,
-                                        cosa que se hace con ''. Abajo pongo un oninput con el que probé esto 
-                                        
-                                        oninput=" // setCustomValidity(''); //Si se le saca el  comentario se puede ver que ahora validity es true
-                                        checkValidity();
-                                        console.log(validity); 
-                                        console.log(this.validity.valid);
-                                        setCustomValidity(validity.typeMismatch ? 'Ingrese un correo con @' : 'Por favor ingrese su email')
-                                        
-                                        Info para entender mejor: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api 
-                                    
-                                        Al final creo que la segunda forma de hacer esto es más sencillo, mirar el resto de campos... -->
+                                        <!-- Ver nota HTML.1 - Luca -->
                                 </div>
                                 <div class="w3-col" style="width:150px">
                                     <p></p>
                                 </div>
                                 <div class="w3-col" style="width: 40%;">
                                     <span class="w3-left">Fecha a reservar *</span>
-                                    <input id="fecha" class="w3-input w3-light-grey" type="date"
+                                    <input type="date" id="fecha" name="fecha" class="w3-input w3-light-grey"
                                     oninvalid="this.setCustomValidity('Por favor ingrese una fecha')"
                                     oninput="this.setCustomValidity('')" required>
                                 </div>
@@ -141,7 +126,7 @@
                             <div class="w3-row-padding">
                                 <div class="w3-col" style="width: 40%;">
                                     <span class="w3-left">Teléfono *</span>
-                                    <input type="tel" id="telefono" class="w3-input w3-light-grey" name="telefono" 
+                                    <input type="tel" id="telefono" name="telefono" class="w3-input w3-light-grey" 
                                     oninvalid="this.setCustomValidity('Por favor ingrese su número telefónico/celular')"
                                     oninput="this.setCustomValidity('')"required>
                                 </div>
@@ -149,7 +134,7 @@
                             <div class="w3-row-padding">
                                 <div class="w3-col" style="width: 20%;">
                                     <span class="w3-left" style="text-align: left;">Cantidad de jugadores por equipo</span>
-                                    <input id="can.jugadores" class="w3-input w3-light-grey" type="text" name="can.jugadores">
+                                    <input type="number" id="can.jugadores" name="can.jugadores" class="w3-input w3-light-grey">
                                 </div>
                             </div>
                             <span class="w3-left">* campos requeridos</span>

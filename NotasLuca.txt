@@ -1,0 +1,69 @@
+    JavaScript:
+
+1) a_
+
+La función serialize hace que los campos se separen entre “&&”. Cómo obtener los datos luego de una forma no engorrosa 
+sigue siendo un misterio. Acá dejo el código que posiblita extraerlos con expresiones regulares:
+
+// En PHP:
+//
+// $campos = $_POST['campos']; // Almacenar en la variable $nombre lo que se está recibiendo con el protocolo POST con el nombre "nombre"
+// $campos2 = $_POST['campos2'];
+// $xd = preg_split('*&*', $campos2, -1);
+// print_r($xd);
+// // Recoger los valores codificados en un string a través de expresiones regulares:
+// // De acá obtuve la info: https://stackoverflow.com/questions/5696412/how-to-get-a-substring-between-two-strings-in-php
+// // https://www.php.net/manual/es/function.preg-match.php
+// preg_match('/nombre=(.*?)&/',$campos2, $xd2);
+// preg_match('/apellido=(.*?)&/',$campos2, $xd2);
+// // preg_match('/option=(.*?)&/',$campos2, $xd2);
+// $lol == ($xd2[1]);
+// echo $campos[1];
+
+Existe una gran posibilidad de que utilizando algo del anterior código, junto a otras funciones pueda convertir ese string en un
+JSON string. Este último es una forma de presentar la información en el string, formato que son aceptados por 2 funciones de PHP:
+json_decode y json_encode, funciones que facilitan mucho pasar la data entre el front end y el back end.
+
+b_ 
+
+Como primer comentario: no sé por qué no acepta como argumento $(this), pero bueno. Esta función obtiene toda la data del formulario,
+pero por razones que al momento de escribir se me escapa, no es un JSON, por ello lo convertimos a eso: 'Object.fromEntries(data.entries())'.
+// De donde obtuve esto: https://www.learnwithjason.dev/blog/get-form-values-as-json
+A su vez, está JSON.stringify que obtiene el JSON string para pasarselo al PHP. 
+Una cosa que notó Santiago es que la fecha no está siendo tomada como dato. Hay que solucionar eso.
+
+2)
+// Es medio quilombo, pero básicamente tiene que ver con el objeto Date. Parece ser muy poderoso.
+// En este caso además de obtener la fecha actual lo utilizo para pasar de milisigundos al formato de Date.
+// Obtengo el mes, le sumo uno, lo reemplazo en la fecha actual, lo paso al formato de Date, y lo termino 
+// dejando con el formato que entiende max, o eso es lo que entiendo xd.
+
+
+
+    HTML:
+
+1) 
+
+<!-- 'setCustomValidity no solo establece el mensaje, sino que también marca 
+el campo como inválido. Para ver si el campo realmente lo es hay que restablecerlo,
+cosa que se hace con ''. Abajo pongo un oninput con el que probé esto
+
+oninput=" // setCustomValidity(''); //Si se le saca el  comentario se puede ver que ahora validity es true
+checkValidity();
+console.log(validity); 
+console.log(this.validity.valid);
+setCustomValidity(validity.typeMismatch ? 'Ingrese un correo con @' : 'Por favor ingrese su email')
+                                        
+Info para entender mejor: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api 
+                                    
+Al final creo que la segunda forma de hacer esto es más sencillo, mirar el resto de campos... -->
+
+2)
+
+<!-- Voy a utlizar las herramientas que provee HTML para dar respuesta al usuario. Por lo que pude ver existe múltiples 
+    formas de hacer esto, siendo un ejemplo con Javascript. Existe la posibilidad de utilizar además un plugin de JQuery -->
+<!-- Además, por lo que entiendo la verificación en HTML o JS es insegura ya que se puede bypasear con las herramientas del navegador. 
+    Sin embargo, esta es nuestra primera página xd -->
+
+Otra aclaración: Las funciones para serializar (como serialize, serializeArray, FormData) obtiene los campos del HTML a partir de la
+etiqueta o propiedad name. Si no se encuentra esto, no obtiene la data.

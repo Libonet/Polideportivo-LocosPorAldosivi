@@ -2,20 +2,23 @@
     
     include('database.php');
 
-    // $campos = $_POST['campos']; // Almacenar en la variable $nombre lo que se está recibiendo con el protocolo POST con el nombre "nombre"
-    // $campos2 = $_POST['campos2'];
-    // $xd = preg_split('*&*', $campos2, -1);
-    // print_r($xd);
-    // // Recoger los valores codificados en un string a través de expresiones regulares:
-    // // De acá obtuve la info: https://stackoverflow.com/questions/5696412/how-to-get-a-substring-between-two-strings-in-php
-    // // https://www.php.net/manual/es/function.preg-match.php
-    // preg_match('/nombre=(.*?)&/',$campos2, $xd2);
-    // preg_match('/apellido=(.*?)&/',$campos2, $xd2);
-    // // preg_match('/option=(.*?)&/',$campos2, $xd2);
-    // $lol == ($xd2[1]);
-    // echo $campos[1];
+    $xd = $_POST['vamos'];
+    $nombre = json_decode($xd);
+    $xd3 = $_POST['campos2'];
+    echo $xd3->nombre;
+    echo $nombre->nombre; // $_POST['nombre'];
+    echo $nombre->apellido;
+    echo $nombre->email;
+    echo $nombre->fecha;
+    echo "basta";
 
-    echo $_POST['nombre'];
+    $myObj->name = "John";
+    $myObj->age = 30;
+    $myObj->city = "New York";
+
+    $myJSON = json_encode($myObj);
+
+    echo $myJSON;
     exit();
 
     // Si nombre no está vacio, procedo hacer una búsqueda en la base de datos
