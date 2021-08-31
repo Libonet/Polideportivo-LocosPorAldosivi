@@ -12,6 +12,10 @@ body {
     color:black;
 }
 
+#seleccion {
+    background-color: rgba(39, 139, 36, 0.863);
+}
+
 .barra_menu {
     font-family: 'Sanchez', serif;
     font-size: 25px;
@@ -23,29 +27,63 @@ body {
     1px 1px 0 #000;
 }
 
-/* Desaparece las imagenes en tamaño mobile */
+/*tamaño pc*/
 @media screen and (min-width: 801px) {
-    #garfelf1{
+    #container-slider {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 55%;
+    }
+    #slider {
+        overflow: hidden;
+    }
+    #slider figure {
+        position: relative;
+        width: 500%;
+        margin: 0;
+        left: 0;
+        animation: 15s slider infinite;
+    }
+    #slider figure img {
         width: 20%;
+        float: left;
     }
-    #garfelf2{
-        width: 17%;
-    }
-    #garfelf3{
-        width: 15%;
+
+    @keyframes slider {
+        0% {
+            left: 0;
+        }
+        20% {
+            left: 0;
+        }
+        25% {
+            left: -100%;
+        }
+        45% {
+            left: -100%;
+        }
+        50% {
+            left: -200%;
+        }
+        70% {
+            left: -200%;
+        }
+        75% {
+            left: -300%;
+        }
+        95% {
+            left: -300%;
+        }
+        100%{
+            left: -400%;
+        }
     }
 }
 
+/*tamaño celular*/
 @media screen and (max-width: 800px){
-    #garfelf1{
-        width: 0%;
-    }
-    #garfelf2{
-        width: 0%;
-    }
-    #garfelf3{
-        width: 0%;
-    }
+    
 }
 
 #RectanguloAmarillo
@@ -54,7 +92,7 @@ body {
     box-shadow: 7px 7px 13px black;
 }
 
-/* Estilo de las imagenes */
+/* Estilo de las imagenes
 .page img {
     box-shadow: 7px 7px 15px black;
     margin-bottom: 20px;
@@ -67,16 +105,4 @@ input {
     border-radius: 8px;
     box-shadow: 7px 7px 13px green;
 }
-#second {
-    display: none;
-}
-#third {
-    display: none;
-}
-#fourth {
-    display: none;
-}
-
-#seleccion {
-    background-color: rgba(60, 212, 55, 0.863);
-}
+*/
