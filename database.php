@@ -1,7 +1,9 @@
 <?php
+// Van a utilizarse '' para variables y "" para carteles, ya que permite el \n
+// Modificar las credenciales de este archivo para poder utlizar la base de datos local
 
 // Conexión a la base de datos
-$connection = new mysqli("localhost","nuevenue","nueve990","nueve");
+$connection = new mysqli('localhost','nuevenue','nueve990','nueve');
 
 // Comprobar conexión
 if ($connection -> connect_errnor) {
@@ -12,14 +14,5 @@ else {
   // Nota: Solo se puede poner \n con doble comillas
   echo "Se conectó correctamente a la base de datos\n";
 }
-
-// // Verificación de la existencia (o no) del email ingresado
-// $res = mysqli->query("SELECT Orden FROM clientes WHERE Email = '".$_POST['email']."' ");
-// if($res->num_rows)
-//     echo -1;
-// else{
-//     mysqli->query("INSERT INTO clientes (Nombre, Apellido, Telefono, Email) VALUES 
-//     ('".$_POST['nombre']."', '".$_POST['apellido']."', '".$_POST['telefono']."', '".$_POST['email']."') ");
-// }
 
 ?>
