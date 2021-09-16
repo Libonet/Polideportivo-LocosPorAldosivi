@@ -4,15 +4,17 @@
 
     $datos = json_decode($_POST['datos']);
 
-    // Nota: La consulta debe ir con doble comillas, con comillas simples no funca
+    // Nota: La consulta debe ir con doble comillas, con comillas simples no funca. Además para hacer una consulta múltiple 
+    // se tiene que incluir ';' al final del comando SQL, para que se pueda ejecutar uno tras otro.
     $query = "INSERT INTO clientes (Nombre, Apellido, Telefono, Email) VALUES
-    ('$datos->nombre', '$datos->apellido', '$datos->telefono', '$datos->email') "; // Acá establecemos la consulta, pero no la ejecutamos, entonces...
-    $result = mysqli_query($connection, $query); // Con la función mysqli_query, al que le envio las credenciales y la consulta, 
-    // devuelve el resultado y lo guarda en $result
+    ('$datos->nombre', '$datos->apellido', '$datos->telefono', '$datos->email');"; // Acá establecemos la consulta, pero no la ejecutamos, entonces...
     
-    $query2 = "INSERT INTO cancha (Partidario, Rival, Tipo, Cant.jugadores, FechaReserva) VALUES 
-    ('$datos->partidario', '$datos->rival', '$datos->cancha', '$datos->can.jugadores', '$datos->fecha')"; // Grabo en la tabla 'cancha'
-    $result2 = mysqli_query($connection, $query2);
+    $query .= "INSERT INTO cancha (Partidario, Rival, Tipo, Cant_jugadores, FechaReserva) VALUES 
+    ('$datos->partidario', '$datos->rival', '$datos->cancha', '$datos->cant_jugadores', '$datos->fecha')"; // Grabo en la tabla 'cancha'
+
+    echo $query;
+    $result = mysqli_multi_query($connection, $query); // Con la función mysqli_query, al que le envio las credenciales y la consulta, 
+    // devuelve el resultado y lo guarda en $result
 
     // echo $result; Nota: No se puede mostrar el objeto de esta manera, hay que descomponerlo como figura abajo
 

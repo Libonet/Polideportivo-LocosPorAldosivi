@@ -77,7 +77,8 @@ span.w3-left{
 
 /* Este es nuestro diseño para los campos no válidos */
 input:invalid{
-    border-color: #900;
+    /* border-color: #900; */
+    border: 2px solid #bd2929;
     background-color: #FDD;
   }
 

@@ -30,7 +30,6 @@ Como primer comentario: no sé por qué no acepta como argumento $(this), pero b
 pero por razones que al momento de escribir se me escapa, no es un JSON, por ello lo convertimos a eso: 'Object.fromEntries(data.entries())'.
 // De donde obtuve esto: https://www.learnwithjason.dev/blog/get-form-values-as-json
 A su vez, está JSON.stringify que obtiene el JSON string para pasarselo al PHP. 
-Una cosa que notó Santiago es que la fecha no está siendo tomada como dato. Hay que solucionar eso.
 
 2)
 // Es medio quilombo, pero básicamente tiene que ver con el objeto Date. Parece ser muy poderoso.
