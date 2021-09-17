@@ -17,24 +17,28 @@
 </head>
 
 <body>
-    <!-- Barra de navegación -->
-    <div class="w3-bar">
-        <div class="w3-bar-item">
-            <img src="../../resources/poli_deportivo.png" width="75px" height="75px">
+    <div>
+        <!-- Barra de navegacion -->
+        <div class="w3-bar">
+            <a href="../../index.html">
+                <div class="w3-bar-item">
+                    <img src="../../resources/poli_deportivo.png" width="75px" height="75px">
+                </div>
+                <div class="w3-bar-item">
+                    <span id="titulo">
+                        Polideportivo<br>
+                        Locos por Aldosivi
+                    </span>
+                </div>
+            </a>
+            <a href="../nosotros/nosotros.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Sobre Nosotros</a>
+            <a href="../contacto/contacto.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Contacto</a>
+            <a href="galeria.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Galeria</a>
         </div>
-		<div class="w3-bar-item">
-            <span id="titulo">
-                Polideportivo<br>
-                Locos por Aldosivi
-            </span>
-        </div>
-		<a href="../../index.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">
-            <img src="../../resources/home_black_48dp.svg">
-        </a>
-		<a href="../nosotros/nosotros.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Sobre Nosotros</a>
-		<a href="../contacto/contacto.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Contacto</a>
-		<a id="seleccion" href="galeria.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Galeria</a>
-	</div>
+        <br>
+    </div>
+
+
     <div class = "w3-row"> <!--"Rectangulo Amarillo-->
         <div class="w3-panel w3-col" style="width: 24%; height: auto;">
             <p></p>
@@ -47,17 +51,43 @@
         </div>
     </div>
 
-    <div id=container-slider>
-        <div id="slider">
-            <figure>
-                <img src="../../resources/Basket.png">
-                <img src="../../resources/Futbol.png">
-                <img src="../../resources/Natacion.png">
-                <img src="../../resources/Volley.png">
-                <img src="../../resources/Basket.png">
-            </figure>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <img src="../../resources/Basket.png" style="width:100%">
+          <div class="text">Caption Text</div>
         </div>
-    </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <img src="../../resources/Futbol.png" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img src="../../resources/Volley.png" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="../../resources/Natacion.png" style="width:100%">
+            <div class="text">Caption Four</div>
+          </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+          <span class="dot" onclick="currentSlide(4)"></span> 
+        </div>
 
     <!-- <h1 class="w3-center" id="titulo" style="font-size: 40px;">Galería</h1> -->
     <!-- Primera imagen de la galería -->
