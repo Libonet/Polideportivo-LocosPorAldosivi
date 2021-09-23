@@ -1,5 +1,6 @@
 Este repositorio está dedicado al sitio web para el segundo trabajo de Aplicaciones Específicas de Redes 2021
 
+
 Para establecer la configuración de la base de datos local, ejecutar el siguiente comando:
     
     cp database.php.sample database.php

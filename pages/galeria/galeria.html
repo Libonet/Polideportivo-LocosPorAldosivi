@@ -17,24 +17,15 @@
 </head>
 
 <body>
-    <!-- Barra de navegación -->
-    <div class="w3-bar">
-        <div class="w3-bar-item">
-            <img src="../../resources/poli_deportivo.png" width="75px" height="75px">
-        </div>
-		<div class="w3-bar-item">
-            <span id="titulo">
-                Polideportivo<br>
-                Locos por Aldosivi
-            </span>
-        </div>
-		<a href="../../index.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">
-            <img src="../../resources/home_black_48dp.svg">
-        </a>
-		<a href="../nosotros/nosotros.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Sobre Nosotros</a>
-		<a href="../contacto/contacto.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Contacto</a>
-		<a id="seleccion" href="galeria.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Galeria</a>
-	</div>
+    
+    <!-- Barra de navegacion -->
+    <div id="nav-placeholder"></div>
+    <script>
+    $(function(){
+      $("#nav-placeholder").load("/Polideportivo-LocosPorAldosivi/nav.html");
+    });
+    </script>
+
     <div class = "w3-row"> <!--"Rectangulo Amarillo-->
         <div class="w3-panel w3-col" style="width: 24%; height: auto;">
             <p></p>
