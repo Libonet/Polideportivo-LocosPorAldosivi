@@ -21,23 +21,65 @@
 </head>
 
 <body class="w3-dark-gray">
-
-    <!-- Barra de navegacion -->
-    <div id="nav-placeholder"></div>
-    <script>
-    $(function(){
-      $("#nav-placeholder").load("/Polideportivo-LocosPorAldosivi/nav.html");
-    });
-    </script>
-
+    
+    
+    <!-- Formulario y nuestros equipos -->
     <div id="estadio" class="w3-bar">
+        <div>
+            
+            <!-- Barra de navegacion -->
+            <div id="nav-placeholder"></div>
+            <script>
+            $(function(){
+            $("#nav-placeholder").load("/Polideportivo-LocosPorAldosivi/nav.html");
+            });
+            </script>
+
+            <div id="estadio" class="w3-bar">
+
+                <div id="id01" class="modal">
+                    <form class="modal-content animate" action="/action_page.php" method="post">
+                        <div class="imgcontainer">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        </div>
+
+                        <div class="w3-center">
+                            <img src="resources/poli_deportivo.png" width="75px" height="75px">
+                        </div>
+                        <div class="w3-center">
+                            <span id="titulo">
+                                Polideportivo<br>
+                                Locos por Aldosivi
+                            </span>
+                        </div>
+
+                        <div class="container">
+                            <label for="uname"><b>Nombre De Usuario</b></label>
+                            <input type="text" placeholder="Nombre de usuario" name="uname" required>
+
+                            <label for="psw"><b>Contraseña</b></label>
+                            <input type="password" placeholder="Contraseña" name="psw" required>
+                            
+                            <button type="submit">Ingresar</button>
+                        </div>
+
+                        <div class="container" style="background-color:#f1f1f1">
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
+                            <span class="psw">Olvidaste tu <a href="#">contraseña?</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <br>
+        </div>
+        
         <div class="w3-row">
             <div class="w3-container w3-third w3-center">
-                <button onclick="document.getElementById('id01').style.display='block'" id="reserva" class="w3-btn" >Reservá una cancha</button>
-            <div id="id01" class="w3-modal">
+                <button onclick="document.getElementById('id02').style.display='block'" id="reserva" class="w3-btn" >Reservá una cancha</button>
+            <div id="id02" class="w3-modal">
                 <div class="w3-modal-content">
                     <div class="w3-container">
-                        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                         <br>
                         <br>
                         <!-- formulario -->
