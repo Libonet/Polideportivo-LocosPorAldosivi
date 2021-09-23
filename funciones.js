@@ -2,16 +2,6 @@
 $(function() {
     console.log("JQuery is Working");
 
-    // Get the modal
-    var modal = document.getElementById('id01');
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-}
-
     $('#reserva').click(function verificar(e) {
         // Ver nota JavaScript.2 - Luca
         date = new Date
