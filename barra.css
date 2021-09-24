@@ -12,7 +12,6 @@
   color: #6219d6;
 }
 
-
 /* Esto es para el login */
 /* body {font-family: Arial, Helvetica, sans-serif;} */
 a {
@@ -33,7 +32,7 @@ input[type=text], input[type=password] {
 /* Set a style for all buttons */
 .modal-content button {
   background-color: #04AA6D;
-  color: white;
+  /* color: white; */
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
