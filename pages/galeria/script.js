@@ -1,28 +1,26 @@
-function switchPages(x) {
-    switch(x) {
-        case 1:
-            $("#first").show();
-            $("#second").hide();
-            $("#third").hide();
-            $("#fourth").hide();
-            break;
-        case 2:
-            $("#first").hide();
-            $("#second").show();
-            $("#third").hide();
-            $("#fourth").hide();
-            break;
-        case 3:
-            $("#first").hide();
-            $("#second").hide();
-            $("#third").show();
-            $("#fourth").hide();
-            break;
-        case 4:
-            $("#first").hide();
-            $("#second").hide();
-            $("#third").hide();
-            $("#fourth").show();
-            break;
-    }
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
 }

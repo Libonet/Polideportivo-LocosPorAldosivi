@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <title>Locos Por Aldosivi</title>
     <meta charset="UTF-8">
@@ -11,69 +11,120 @@
     <link href="https://fonts.googleapis.com/css2?family=Sancreek&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="barra.css">
     <link rel="shortcut icon" href="resources/EnanitoVerde.png">
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> Otra fuente de JQuery-->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script> Plugin de validación JQuery -->
     <script type="text/javascript" src="funciones.js"></script>
+    <script type="text/javascript" src="asociate.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
 </head>
 
 <body class="w3-dark-gray">
-    <!-- Formulario y nuestros equipos -->
-    <div id="barra">
-        <!-- Barra de navegacion -->
-        <div class="w3-bar">
-            <div class="w3-bar-item">
-                <img src="resources/poli_deportivo.png" width="75px" height="75px">
-            </div>
-            <div class="w3-bar-item">
-                <span id="titulo">
-                    Polideportivo<br>
-                    Locos por Aldosivi
-                </span>
-            </div>
-            <a href="index.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">
-                <img src="resources/home_black_48dp.svg">
-            </a>
-            <a href="pages/nosotros/nosotros.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Sobre Nosotros</a>
-            <a href="pages/contacto/contacto.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Contacto</a>
-            <a href="pages/galeria/galeria.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Galeria</a>
-        </div>
-        <br>
-    </div>
-
     
+    
+    <!-- Formulario y nuestros equipos -->
     <div id="estadio" class="w3-bar">
+        <div>
+            
+            <!-- Barra de navegacion -->
+            <div id="nav-placeholder"></div>
+            <script>
+            $(function(){
+            $("#nav-placeholder").load("/Polideportivo-LocosPorAldosivi/nav.html");
+            });
+            </script>
+
+            <div id="estadio" class="w3-bar">
+
+                <div id="id01" class="modal">
+                    <form class="modal-content animate" action="login.php" method="post">
+                        <div class="imgcontainer">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        </div>
+
+                        <div class="w3-center">
+                            <img src="resources/poli_deportivo.png" width="75px" height="75px">
+                        </div>
+                        <div class="w3-center">
+                            <span id="titulo">
+                                Polideportivo<br>
+                                Locos por Aldosivi
+                            </span>
+                        </div>
+                        
+                        <div class="w3-bar">
+                            <div class="w3-bar-item">
+                                <div class="container">
+                                    <label for="uname"><b>Nombre De Usuario</b></label>
+                                    <input type="text" placeholder="Nombre de usuario" name="uname" required>
+
+                                    <label for="psw"><b>Contraseña</b></label>
+                                    <input type="password" placeholder="Contraseña" name="psw" required>
+                                    
+                                    <button type="submit">Ingresar</button>
+                                </div>
+
+                                <div class="container" style="background-color:#f1f1f1">
+                                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
+                                    <span class="psw w3-text-black">Olvidaste tu <a href="#">contraseña?</a></span>
+                                </div>
+                            </div>
+                            <div class="w3-bar-item">
+                                <div class="container">
+                                    <label for="email"><b>Email</b></label>
+                                    <input type="email" placeholder="Email" name="Email" required>
+
+                                    <label for="uname"><b>Nombre De Usuario</b></label>
+                                    <input type="text" placeholder="Nombre de usuario" name="uname" required>
+
+                                    <label for="psw"><b>Contraseña</b></label>
+                                    <input type="password" placeholder="Contraseña" name="psw" required>
+
+                                    <label for="dni"><b>Dni</b></label>
+                                    <input type="number" placeholder="Dni" name="Dni" required>
+
+                                    <label for="telef"><b>Telefono</b></label>
+                                    <input type="tel" placeholder="Telefono" name="Telefono" required>
+
+                                    <!-- Metodo de pago iría acá -->
+
+                                    <button type="submit">Registrarse</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <br>
+        </div>
+        
         <div class="w3-row">
             <div class="w3-container w3-third w3-center">
-                <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn" id="reserva">Reservá una cancha</button>
-            <div id="id01" class="w3-modal">
+                <button onclick="document.getElementById('id02').style.display='block'" id="reserva" class="w3-btn" >Reservá una cancha</button>
+            <div id="id02" class="w3-modal">
                 <div class="w3-modal-content">
                     <div class="w3-container">
-                        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                         <br>
                         <br>
                         <!-- formulario -->
-                        <!-- Voy a utlizar las herramientas que provee HTML para dar respuesta al usuario. Por lo que pude ver existe múltiples 
-                            formas de hacer esto, siendo un ejemplo con Javascript. Existe la posibilidad de utilizar además un plugin de JQuery -->
-                        <!-- Además, por lo que entiendo la verificación en HTML o JS es insegura ya que se puede bypasear con las herramientas del navegador. 
-                            Sin embargo, esta es nuestra primera página xd -->
+                        <!-- Ver nota HTML.1 - Luca -->
                         <form id="ReservaDeCancha" class="w3-container">
                             <!-- Nombre, apellido y tipo de cancha -->
                             <div class="w3-row-padding">    
                                 <div class="w3-quarter">
                                     <span class="w3-left">Nombre *</span>
-                                    <input id="nombre" class="w3-input w3-light-grey" type="text" name="nombre" 
+                                    <input type="text" id="nombre" name="nombre" class="w3-input w3-light-grey" 
                                     oninvalid="this.setCustomValidity('Por favor ingrese su nombre')"
                                     oninput="this.setCustomValidity('')" required/>
                                     <span class="error" aria-live="polite"></span> <!-- Como se muestra la ventana de error -->
                                 </div>
                                 <div class="w3-quarter">
                                     <span class="w3-left">Apellido *</span>
-                                    <input id="apellido" class="w3-input w3-light-grey" type="text" name="apellido" 
+                                    <input type="text" id="apellido" name="apellido" class="w3-input w3-light-grey" 
                                     oninvalid="this.setCustomValidity('Por favor ingrese su apellido')"
                                     oninput="this.setCustomValidity('')" required>
                                 </div>
@@ -82,13 +133,13 @@
                                 </div>
                                 <div class="w3-rest">
                                     <span class="w3-left">Tipo de cancha *</span>
-                                    <select class="w3-select w3-light-grey" name="option" id="cancha" 
+                                    <select id="cancha" name="cancha" class="w3-select w3-light-grey" 
                                     oninvalid="this.setCustomValidity('Por favor ingrese el tipo de cancha')"
                                     oninput="this.setCustomValidity('')" required>
                                         <option value="" disabled selected>Elija una opcion</option>
-                                        <option value="1">Futbol5</option>
-                                        <option value="2">Basquet</option>
-                                        <option value="3">Volley</option>
+                                        <option value="Futbol5">Futbol5</option>
+                                        <option value="Basquet">Basquet</option>
+                                        <option value="Volley">Volley</option>
                                     </select>
                                 </div>
                             </div>
@@ -96,44 +147,38 @@
                             <div class="w3-row-padding">
                                 <div class="w3-col" style="width: 40%;">
                                     <span class="w3-left">Nombre del equipo</span>
-                                    <input id="partidario" class="w3-input w3-light-grey" type="text" name="partidario">
+                                    <input type="text" id="partidario" name="partidario" class="w3-input w3-light-grey">
                                 </div>
                                 <div class="w3-col" style="width:150px">
                                     <p></p>
                                 </div>
                                 <div class="w3-col" style="width: 40%;">
                                     <span class="w3-left">Nombre del equipo rival</span>
-                                    <input id="rival" class="w3-input w3-light-grey" type="text" name="rival">
+                                    <input type="text" id="rival" name="rival" class="w3-input w3-light-grey">
                                 </div>
                             </div>
                             <!-- Email y fecha a reservar -->
                             <div class="w3-row-padding">
                                 <div class="w3-col" style="width: 40%;">
                                     <span class="w3-left">Email *</span>
-                                        <input type="email" id="email" class="w3-input w3-light-grey" name="email" required
+                                        <input type="email" id="email" name="email" class="w3-input w3-light-grey" required
                                         oninput="setCustomValidity(''); 
-                                        this.validity.valid ? '' : setCustomValidity(validity.typeMismatch ? 'Ingrese un correo valido' : 'Por favor ingrese su email')">
-                                        <!-- 'setCustomValidity no solo establece el mensaje, sino que también marca 
-                                        el campo como inválido. Para ver si el campo realmente lo es hay que restablecerlo,
-                                        cosa que se hace con ''. Abajo pongo un oninput con el que probé esto 
-                                        
-                                        oninput=" // setCustomValidity(''); //Si se le saca el  comentario se puede ver que ahora validity es true
-                                        checkValidity();
-                                        console.log(validity); 
-                                        console.log(this.validity.valid);
-                                        setCustomValidity(validity.typeMismatch ? 'Ingrese un correo con @' : 'Por favor ingrese su email')
-                                        
-                                        Info para entender mejor: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api 
-                                    
-                                        Al final creo que la segunda forma de hacer esto es más sencillo, mirar el resto de campos... -->
+                                        this.validity.valid ? '' : setCustomValidity(validity.typeMismatch ? 
+                                        'Ingrese un correo valido' : 'Por favor ingrese su email')">
+                                        <!-- Ver nota HTML.1 - Luca -->
                                 </div>
                                 <div class="w3-col" style="width:150px">
                                     <p></p>
                                 </div>
                                 <div class="w3-col" style="width: 40%;">
-                                    <span class="w3-left">Fecha a reservar *</span>
-                                    <input id="fecha" class="w3-input w3-light-grey" type="date"
+                                    <span class="w3-right">Fecha a reservar *</span>
+                                    <input type="date" id="fecha" name="fecha" class="w3-input w3-light-grey"
                                     oninvalid="this.setCustomValidity('Por favor ingrese una fecha')"
+                                    oninput="this.setCustomValidity('')" required>
+
+                                    <span class="w3-left">Hora a reservar *</span>
+                                    <input type="time" id="hora" name="hora" class="w3-input w3-light-grey"
+                                    oninvalid="this.setCustomValidity('Por favor ingrese una hora')"
                                     oninput="this.setCustomValidity('')" required>
                                 </div>
                             </div>
@@ -141,15 +186,18 @@
                             <div class="w3-row-padding">
                                 <div class="w3-col" style="width: 40%;">
                                     <span class="w3-left">Teléfono *</span>
-                                    <input type="tel" id="telefono" class="w3-input w3-light-grey" name="telefono" 
+                                    <input type="tel" id="telefono" name="telefono" class="w3-input w3-light-grey" 
                                     oninvalid="this.setCustomValidity('Por favor ingrese su número telefónico/celular')"
-                                    oninput="this.setCustomValidity('')"required>
+                                    oninput="this.setCustomValidity('')" required>
                                 </div>
                             </div>
                             <div class="w3-row-padding">
                                 <div class="w3-col" style="width: 20%;">
                                     <span class="w3-left" style="text-align: left;">Cantidad de jugadores por equipo</span>
-                                    <input id="can.jugadores" class="w3-input w3-light-grey" type="text" name="can.jugadores">
+                                    <input type="number" id="cant_jugadores" name="cant_jugadores" class="w3-input w3-light-grey" max="30"
+                                    oninvalid="this.validity.valid ? '' : setCustomValidity(validity.rangeOverflow ? 
+                                    'No puede ser un valor mayor a 30' : 'Ingrese un número')"
+                                    oninput="this.setCustomValidity('')">
                                 </div>
                             </div>
                             <span class="w3-left">* campos requeridos</span>
@@ -280,4 +328,3 @@
     </div>
 </body>
 </html>
-

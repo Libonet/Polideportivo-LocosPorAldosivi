@@ -1,49 +1,31 @@
 #estadio{
-    background-image: url("resources/AldosiviClean.jpg");
-    background-repeat: no-repeat;
-    background-attachment: local, scroll;
-    background-size: cover;
+  background-image: url("resources/AldosiviClean.jpg");
+  background-repeat: no-repeat;
+  background-attachment: local, scroll;
+  background-size: cover;
 }
 #titulo {
-    font-family: 'Sancreek', cursive;
-    font-size:25px;
-    color:black;
+  font-family: 'Sancreek', cursive;
+  font-size:25px;
+  color:black;
 }
 
 #otitulo {
-    font-family: 'Sancreek', cursive;
-    font-size:40px;
-    color:black;
-}
-
-#barra{
-    background-image: url("resources/AldosiviWallpaperPeroNo4k.jpg");
-    background-repeat: no-repeat;
-    background-attachment: local, scroll;
-    background-size: cover;
+  font-family: 'Sancreek', cursive;
+  font-size:40px;
+  color:black;
 }
 
 #reserva{
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 30px;
-    border-radius: 20px;
-    font-family: 'Sanchez', cursive;
-    font-size:40px;
-    color: #2b1055;
-    font-weight: bolder;
-    background-color: white;
-}
-
-.barra_menu {
-    font-family: 'Sanchez', serif;
-    font-size: 25px;
-    color: #fab62d;
-    text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 20px;
+  font-family: 'Sanchez', cursive;
+  font-size:40px;
+  color: #2b1055;
+  font-weight: bolder;
+  background-color: white;
 }
 
 .w3-modal-content{
@@ -77,7 +59,8 @@ span.w3-left{
 
 /* Este es nuestro diseño para los campos no válidos */
 input:invalid{
-    border-color: #900;
+    /* border-color: #900; */
+    border: 2px solid #bd2929;
     background-color: #FDD;
   }
 
