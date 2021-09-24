@@ -11,11 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Sancreek&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="barra.css">
     <link rel="shortcut icon" href="resources/EnanitoVerde.png">
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> Otra fuente de JQuery-->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script> Plugin de validación JQuery -->
     <script type="text/javascript" src="funciones.js"></script>
+    <script type="text/javascript" src="asociate.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
@@ -38,7 +40,7 @@
             <div id="estadio" class="w3-bar">
 
                 <div id="id01" class="modal">
-                    <form class="modal-content animate" action="/action_page.php" method="post">
+                    <form class="modal-content animate" action="login.php" method="post">
                         <div class="imgcontainer">
                             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                         </div>
@@ -52,20 +54,46 @@
                                 Locos por Aldosivi
                             </span>
                         </div>
+                        
+                        <div class="w3-bar">
+                            <div class="w3-bar-item">
+                                <div class="container">
+                                    <label for="uname"><b>Nombre De Usuario</b></label>
+                                    <input type="text" placeholder="Nombre de usuario" name="uname" required>
 
-                        <div class="container">
-                            <label for="uname"><b>Nombre De Usuario</b></label>
-                            <input type="text" placeholder="Nombre de usuario" name="uname" required>
+                                    <label for="psw"><b>Contraseña</b></label>
+                                    <input type="password" placeholder="Contraseña" name="psw" required>
+                                    
+                                    <button type="submit">Ingresar</button>
+                                </div>
 
-                            <label for="psw"><b>Contraseña</b></label>
-                            <input type="password" placeholder="Contraseña" name="psw" required>
-                            
-                            <button type="submit">Ingresar</button>
-                        </div>
+                                <div class="container" style="background-color:#f1f1f1">
+                                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
+                                    <span class="psw w3-text-black">Olvidaste tu <a href="#">contraseña?</a></span>
+                                </div>
+                            </div>
+                            <div class="w3-bar-item">
+                                <div class="container">
+                                    <label for="email"><b>Email</b></label>
+                                    <input type="email" placeholder="Email" name="Email" required>
 
-                        <div class="container" style="background-color:#f1f1f1">
-                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
-                            <span class="psw">Olvidaste tu <a href="#">contraseña?</a></span>
+                                    <label for="uname"><b>Nombre De Usuario</b></label>
+                                    <input type="text" placeholder="Nombre de usuario" name="uname" required>
+
+                                    <label for="psw"><b>Contraseña</b></label>
+                                    <input type="password" placeholder="Contraseña" name="psw" required>
+
+                                    <label for="dni"><b>Dni</b></label>
+                                    <input type="number" placeholder="Dni" name="Dni" required>
+
+                                    <label for="telef"><b>Telefono</b></label>
+                                    <input type="tel" placeholder="Telefono" name="Telefono" required>
+
+                                    <!-- Metodo de pago iría acá -->
+
+                                    <button type="submit">Registrarse</button>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
