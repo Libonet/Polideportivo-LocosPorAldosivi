@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <title>Locos Por Aldosivi</title>
     <meta charset="UTF-8">
@@ -20,7 +20,6 @@
     <script type="text/javascript" src="asociate.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
 </head>
 
 <body class="w3-dark-gray">
@@ -29,23 +28,16 @@
     <!-- Formulario y nuestros equipos -->
     <div id="estadio" class="w3-bar">
         <div>
+            
             <!-- Barra de navegacion -->
-            <div class="w3-bar">
-                <a href="index.html">
-                    <div class="w3-bar-item">
-                        <img src="resources/poli_deportivo.png" width="75px" height="75px">
-                    </div>
-                    <div class="w3-bar-item">
-                        <span id="titulo">
-                            Polideportivo<br>
-                            Locos por Aldosivi
-                        </span>
-                    </div>
-                </a>
-                <a href="pages/nosotros/nosotros.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Sobre Nosotros</a>
-                <a href="pages/contacto/contacto.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Contacto</a>
-                <a href="pages/galeria/galeria.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Galeria</a>
-                <button onclick="document.getElementById('id01').style.display='block'" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu" style="width:auto;">Asociate</button>
+            <div id="nav-placeholder"></div>
+            <script>
+            $(function(){
+            $("#nav-placeholder").load("/Polideportivo-LocosPorAldosivi/nav.html");
+            });
+            </script>
+
+            <div id="estadio" class="w3-bar">
 
                 <div id="id01" class="modal">
                     <form class="modal-content animate" action="login.php" method="post">
@@ -108,6 +100,7 @@
             </div>
             <br>
         </div>
+        
         <div class="w3-row">
             <div class="w3-container w3-third w3-center">
                 <button onclick="document.getElementById('id02').style.display='block'" id="reserva" class="w3-btn" >Reservá una cancha</button>
@@ -335,4 +328,3 @@
     </div>
 </body>
 </html>
-

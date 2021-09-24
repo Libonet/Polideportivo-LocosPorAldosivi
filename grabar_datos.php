@@ -1,12 +1,12 @@
 <?php
     
-    include('database.php');
+    require('database.php');
 
     $datos = json_decode($_POST['datos']);
 
     // Nota: La consulta debe ir con doble comillas, con comillas simples no funca. Además para hacer una consulta múltiple 
     // se tiene que incluir ';' al final del comando SQL, para que se pueda ejecutar uno tras otro.
-    $query = "INSERT INTO clientes (Nombre, Apellido, Telefono, Email) VALUES
+    $query = "INSERT INTO clientes_externos (Nombre, Apellido, Telefono, Email) VALUES
     ('$datos->nombre', '$datos->apellido', '$datos->telefono', '$datos->email');"; // Acá establecemos la consulta, pero no la ejecutamos, entonces...
     
     $query .= "INSERT INTO cancha (Partidario, Rival, Tipo, Cant_jugadores, FechaReserva) VALUES 

@@ -1,3 +1,5 @@
+https://stackoverflow.com/questions/48624475/php-block-shortcut-in-visual-studio-code
+
     JavaScript:
 
 1) a_
@@ -36,6 +38,24 @@ A su vez, está JSON.stringify que obtiene el JSON string para pasarselo al PHP.
 // En este caso además de obtener la fecha actual lo utilizo para pasar de milisigundos al formato de Date.
 // Obtengo el mes, le sumo uno, lo reemplazo en la fecha actual, lo paso al formato de Date, y lo termino 
 // dejando con el formato que entiende max, o eso es lo que entiendo xd.
+
+3)
+// https://stackoverflow.com/questions/51518070/is-there-any-benefit-of-using-html-instead-of-php-files#:~:text=benefit%20to%20using%20.-,html%20instead%20of%20.,php%20to%20execute%20in%20it.
+// https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started
+// https://www.youtube.com/watch?v=GeCNShiLdpc&t=4842s
+El cómo llevar adelante el formulario me ha llevado a mucha incertidumbre. Existe la posibilidad de hacer un método AJAX para
+enviar la información, o directamente haciendo uso de un mismo archivo PHP que envie y reciba información. A la hora de hacer este
+formulario estoy viendo el video que figura arriba, y todo se realiza con PHP, lo que le permite manejar, además, lo que envie el
+usuario. Además, leyendo sobre AJAX (método que aplicamos para la primera versión del formulario), parece carecer de interés para
+El formulario. Copio la breve explicación que expresa el documento de arriba:
+
+    The two major features of AJAX allow you to do the following:
+
+        * Make requests to the server without reloading the page
+        * Receive and work with data from the server
+
+Por lo tanto, creo que la solución que propone el muchacho del video es más claro y corto. Creo que la mayor característica de 
+AJAX no se le va a dar uso en nuestra página.
 
 
 

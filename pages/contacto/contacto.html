@@ -19,61 +19,14 @@
 </head>
 
 <body class="w3-dark-gray">
-	<div>
-        <!-- Barra de navegacion -->
-        <div class="w3-bar">
-            <a href="../../index.html">
-                <div class="w3-bar-item">
-                    <img src="../../resources/poli_deportivo.png" width="75px" height="75px">
-                </div>
-                <div class="w3-bar-item">
-                    <span id="titulo">
-                        Polideportivo<br>
-                        Locos por Aldosivi
-                    </span>
-                </div>
-            </a>
-            <a href="../nosotros/nosotros.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Sobre Nosotros</a>
-            <a href="contacto.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Contacto</a>
-            <a href="../galeria/galeria.html" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu">Galeria</a>
-            <button onclick="document.getElementById('id01').style.display='block'" class="w3-bar-item w3-btn w3-round-large w3-mobile w3-right barra_menu" style="width:auto;">Asociate</button>
-
-                <div id="id01" class="modal">
-                    <form class="modal-content animate" action="/action_page.php" method="post">
-                        <div class="imgcontainer">
-                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                        </div>
-
-                        <div class="w3-center">
-                            <img src="../../resources/poli_deportivo.png" width="75px" height="75px">
-                        </div>
-                        <div class="w3-center">
-                            <span id="titulo">
-                                Polideportivo<br>
-                                Locos por Aldosivi
-                            </span>
-                        </div>
-
-                        <div class="container">
-                            <label for="uname"><b>Nombre De Usuario</b></label>
-                            <input type="text" placeholder="Nombre de usuario" name="uname" required>
-
-                            <label for="psw"><b>Contraseña</b></label>
-                            <input type="password" placeholder="Contraseña" name="psw" required>
-                            
-                            <button type="submit">Ingresar</button>
-                        </div>
-
-                        <div class="container" style="background-color:#f1f1f1">
-                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
-                            <span class="psw w3-text-black">Olvidaste tu <a href="#">contraseña?</a></span>
-                        </div>
-                    </form>
-                </div>
-        </div>
-        <br>
-    </div>
-
+	
+    <!-- Barra de navegacion -->
+    <div id="nav-placeholder"></div>
+    <script>
+    $(function(){
+      $("#nav-placeholder").load("/Polideportivo-LocosPorAldosivi/nav.html");
+    });
+    </script>
 
     <div class="w3-row"> 
         <div class="w3-third">
