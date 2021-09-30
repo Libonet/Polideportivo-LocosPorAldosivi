@@ -3,11 +3,55 @@
   background-repeat: no-repeat;
   background-attachment: local, scroll;
   background-size: cover;
+  background-position: center;
 }
 #titulo {
   font-family: 'Sancreek', cursive;
   font-size:25px;
   color:black;
+}
+
+#container-slider {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+#slider {
+  overflow: hidden;
+}
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 15s slider infinite;
+}
+#slider figure img {
+  width: 20%;
+  float: left;
+}
+
+@keyframes slider {
+  0% {
+      left: 0;
+  }
+  25% {
+      left: 0;
+  }
+  30% {
+      left: -100%;
+  }
+  75% {
+      left: -100%;
+  }
+  80% {
+      left: -200%;
+  }
+  100% {
+      left: -200%;
+  }
+
 }
 
 #otitulo {
