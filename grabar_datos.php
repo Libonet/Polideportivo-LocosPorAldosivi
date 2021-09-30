@@ -13,7 +13,7 @@
     ('$datos->partidario', '$datos->rival', '$datos->cancha', '$datos->cant_jugadores', '$datos->fecha')"; // Grabo en la tabla 'cancha'
 
     echo $query;
-    $result = mysqli_multi_query($connection, $query); // Con la función mysqli_query, al que le envio las credenciales y la consulta, 
+    $result = mysqli_multi_query($connection, $query); // Con la función mysqli_multi_query, al que le envio las credenciales y las consultas, 
     // devuelve el resultado y lo guarda en $result
 
     // echo $result; Nota: No se puede mostrar el objeto de esta manera, hay que descomponerlo como figura abajo

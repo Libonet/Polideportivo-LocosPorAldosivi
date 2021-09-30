@@ -86,3 +86,9 @@ Al final creo que la segunda forma de hacer esto es más sencillo, mirar el rest
 
 Otra aclaración: Las funciones para serializar (como serialize, serializeArray, FormData) obtiene los campos del HTML a partir de la
 etiqueta o propiedad name. Si no se encuentra esto, no obtiene la data.
+
+3)
+
+Para cunado hay más de un botón submit en el form:
+<!-- https://css-tricks.com/separate-form-submit-buttons-go-different-urls/ -->
+<!-- https://www.geeksforgeeks.org/html-formaction-attribute/ -->
