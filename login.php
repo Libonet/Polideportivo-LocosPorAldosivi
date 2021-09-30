@@ -16,7 +16,7 @@ $msg = '';
         $_SESSION['correo']  = $correo;
         $_SESSION['contraseña'] = $contraseña;
         header('Location: index.html');
-    } 
+    }
     else {
         // $msg = 'Nombre o contraseña incorrecta';
         echo '<script language="javascript">';
