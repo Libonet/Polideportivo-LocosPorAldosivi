@@ -13,110 +13,128 @@
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
     <link rel="stylesheet" href="galeria.css">
     <link rel="stylesheet" href="http:/Polideportivo-LocosPorAldosivi/barra.css">
-    <link rel="shortcut icon" href="http:/Polideportivo-LocosPorAldosivi/resources/EnanitoVerde.png">
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="http:/Polideportivo-LocosPorAldosivi/asociate.js"></script>
 </head>
 
 <body onload="showSlides(1)">
-    
-    <!-- Barra de navegacion -->
-    <div id="nav-placeholder"></div>
-    <script>
-    $(function(){
-      $("#nav-placeholder").load("/Polideportivo-LocosPorAldosivi/nav.html");
-    });
-    </script>
+  <!-- Barra de navegacion -->
+  <div id="nav-placeholder"></div>
+  <script>
+  $(function(){
+    $("#nav-placeholder").load("/Polideportivo-LocosPorAldosivi/nav.html");
+  });
+  </script>
 
-    <div class = "w3-row"> <!--"Rectangulo Amarillo-->
-        <div class="w3-panel w3-col" style="width: 24%; height: auto;">
-            <p></p>
-        </div>
-        <div class="w3-panel w3-col" style="width: 52%; height: auto;" id="RectanguloAmarillo">
-                <h1 id="titulo" style="text-align: center; font-size: 40px;">Galería</h1>
-        </div>
-        <div class="w3-panel w3-col" style="width: 24%; height: auto;">
-            <p></p>
-        </div>
+  <div class="w3-row"> <!--"Rectangulo Amarillo-->
+      <div class="w3-panel w3-col" style="width: 24%; height: auto;">
+        <p></p>
+      </div>
+      <div class="w3-panel w3-col" style="width: 52%; height: auto;" id="RectanguloAmarillo">
+        <h1 id="titulo" style="text-align: center; font-size: 40px;">Galería</h1>
+      </div>
+      <div class="w3-panel w3-col" style="width: 24%; height: auto;">
+        <p></p>
+      </div>
+  </div>
+
+  <div class="w3-row">
+    <div class="w3-col w3-center frases" style="width: 25%;">
+      <p>Valentía y fuerza, contra cualquier amenaza!</p>
+      <h2>- Fernando Gago, DT de Aldosivi</h2>
+      <br>
+      <br>
+      <br>
+      <br>
+      <p>La suerte no tiene nada que ver con el éxito</p>
+      <h2>- D10S</h2>
     </div>
-
-    <div class="slideshow-container">
+    <div class="w3-col" style="width: 50%;">
+      <div class="slideshow-container">
         <div class="mySlides fade">
-          <div class="numbertext">1 / 4</div>
           <img src="http:/Polideportivo-LocosPorAldosivi/resources/Basket.jpg" style="width:100%">
           <div class="text">Esta es la histórica cancha de basket del club</div>
         </div>
         
         <div class="mySlides fade">
-          <div class="numbertext">2 / 4</div>
           <img src="http:/Polideportivo-LocosPorAldosivi/resources/Futbol.jpg" style="width:100%">
           <div class="text">Acá tenemos a la icónica cancha de futbol 5 de la que nos enorgullecemos en este polideportivo</div>
         </div>
         
         <div class="mySlides fade">
-          <div class="numbertext">3 / 4</div>
           <img src="http:/Polideportivo-LocosPorAldosivi/resources/Volley.jpg" style="width:100%">
           <div class="text">Y cómo olvidar nuestra famosa cancha de volley, donde entrenan "Las tiburonas", campeonas en Colombia</div>
         </div>
 
         <div class="mySlides fade">
-            <div class="numbertext">4 / 4</div>
-            <img src="http:/Polideportivo-LocosPorAldosivi/resources/Natacion.jpg" style="width:100%">
-            <div class="text">Y esta es nuestra pileta de natación, donde podemos encontrar a Rod Machado superando sus límites</div>
-          </div>
+          <img src="http:/Polideportivo-LocosPorAldosivi/resources/Natacion.jpg" style="width:100%">
+          <div class="text">Y esta es nuestra pileta de natación, donde podemos encontrar a Rod Machado superando sus límites</div>
+        </div>
         
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
         
-        </div>
-        <br>
+      </div>
+      <br>
         
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span> 
-          <span class="dot" onclick="currentSlide(2)"></span> 
-          <span class="dot" onclick="currentSlide(3)"></span> 
-          <span class="dot" onclick="currentSlide(4)"></span> 
-        </div>
-
-    <!-- <h1 class="w3-center" id="titulo" style="font-size: 40px;">Galería</h1> -->
-    <!-- Primera imagen de la galería -->
-	<!-- <div id="first" class="page w3-center">
-        <img src="../../resources/Basket.png" class="w3-image" width="1000px" height="600px">
-        <br>
-        <input type="button" name="" value="  " onclick="switchPages(1)" style="background-color: black;">
-        <input type="button" name="" value="  " onclick="switchPages(2)" style="background-color: white;">
-        <input type="button" name="" value="  " onclick="switchPages(3)" style="background-color: white;">
-        <input type="button" name="" value="  " onclick="switchPages(4)" style="background-color: white;">
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
     </div>
-
-     Segunda imagen de la galería 
-    <div id="second" class="page w3-center">
-        <img src="../../resources/Futbol.png" class="w3-image" width="1000px" height="600px">
-        <br>
-        <input type="button" name="" value="  " onclick="switchPages(1)" style="background-color: white;">
-        <input type="button" name="" value="  " onclick="switchPages(2)" style="background-color: black;">
-        <input type="button" name="" value="  " onclick="switchPages(3)" style="background-color: white;">
-        <input type="button" name="" value="  " onclick="switchPages(4)" style="background-color: white;">
+    <div class="w3-col w3-center frases" style="width: 25%;">
+      <p>"Mi mamá me consideraba el mejor del mundo, así que si ella lo dice será verdad"</p>
+      <h2>- Rod Machado</h2>
+      <br>
+      <br>
+      <br>
+      <br>
+      <p>"Los hinchas valientes son la torre de defensa más fuerte de El Tiburon De Mar Del Plata"</p>
+      <h2>- "La Torre" Billy</h2>
     </div>
+  </div>
 
-     Tercera imagen de la galería 
-    <div id="third" class="page w3-center">
-        <img src="../../resources/Natacion.png" class="w3-image" width="1000px" height="600px">
-        <br>
-        <input type="button" name="" value="  " onclick="switchPages(1)" style="background-color: white;">
-        <input type="button" name="" value="  " onclick="switchPages(2)" style="background-color: white;">
-        <input type="button" name="" value="  " onclick="switchPages(3)" style="background-color: black;">
-        <input type="button" name="" value="  " onclick="switchPages(4)" style="background-color: white;">
-    </div>
+  <!-- <h1 class="w3-center" id="titulo" style="font-size: 40px;">Galería</h1> -->
+  <!-- Primera imagen de la galería -->
+  <!-- <div id="first" class="page w3-center">
+      <img src="../../resources/Basket.png" class="w3-image" width="1000px" height="600px">
+      <br>
+      <input type="button" name="" value="  " onclick="switchPages(1)" style="background-color: black;">
+      <input type="button" name="" value="  " onclick="switchPages(2)" style="background-color: white;">
+      <input type="button" name="" value="  " onclick="switchPages(3)" style="background-color: white;">
+      <input type="button" name="" value="  " onclick="switchPages(4)" style="background-color: white;">
+  </div>
 
-     Cuarta imagen de la galería 
-    <div id="fourth" class="page w3-center">
-        <img src="../../resources/Volley.png" class="w3-image" width="1000px" height="600px">
-        <br>
-        <input type="button" name="" value="  " onclick="switchPages(1)" style="background-color: white;">
-        <input type="button" name="" value="  " onclick="switchPages(2)" style="background-color: white;">
-        <input type="button" name="" value="  " onclick="switchPages(3)" style="background-color: white;">
-        <input type="button" name="" value="  " onclick="switchPages(4)" style="background-color: black;">
-    </div> -->
+    Segunda imagen de la galería 
+  <div id="second" class="page w3-center">
+      <img src="../../resources/Futbol.png" class="w3-image" width="1000px" height="600px">
+      <br>
+      <input type="button" name="" value="  " onclick="switchPages(1)" style="background-color: white;">
+      <input type="button" name="" value="  " onclick="switchPages(2)" style="background-color: black;">
+      <input type="button" name="" value="  " onclick="switchPages(3)" style="background-color: white;">
+      <input type="button" name="" value="  " onclick="switchPages(4)" style="background-color: white;">
+  </div>
+
+    Tercera imagen de la galería 
+  <div id="third" class="page w3-center">
+      <img src="../../resources/Natacion.png" class="w3-image" width="1000px" height="600px">
+      <br>
+      <input type="button" name="" value="  " onclick="switchPages(1)" style="background-color: white;">
+      <input type="button" name="" value="  " onclick="switchPages(2)" style="background-color: white;">
+      <input type="button" name="" value="  " onclick="switchPages(3)" style="background-color: black;">
+      <input type="button" name="" value="  " onclick="switchPages(4)" style="background-color: white;">
+  </div>
+
+    Cuarta imagen de la galería 
+  <div id="fourth" class="page w3-center">
+      <img src="../../resources/Volley.png" class="w3-image" width="1000px" height="600px">
+      <br>
+      <input type="button" name="" value="  " onclick="switchPages(1)" style="background-color: white;">
+      <input type="button" name="" value="  " onclick="switchPages(2)" style="background-color: white;">
+      <input type="button" name="" value="  " onclick="switchPages(3)" style="background-color: white;">
+      <input type="button" name="" value="  " onclick="switchPages(4)" style="background-color: black;">
+  </div> -->
 </body>
 </html>

@@ -22,83 +22,15 @@
 </head>
 
 <body class="w3-dark-gray">
-    
-    
     <!-- Formulario y nuestros equipos -->
-    <div id="estadio" class="w3-bar">
-        <div>
-            
-            <!-- Barra de navegacion -->
-            <div id="nav-placeholder"></div>
-            <script>
-            $(function(){
-            $("#nav-placeholder").load("/Polideportivo-LocosPorAldosivi/nav.html");
-            });
-            </script>
-
-            <div id="estadio" class="w3-bar">
-
-                <div id="id01" class="modal">
-                    <form class="modal-content animate" action="login.php" method="post">
-                        <div class="imgcontainer">
-                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                        </div>
-
-                        <div class="w3-center">
-                            <img src="resources/poli_deportivo.png" width="75px" height="75px">
-                        </div>
-                        <div class="w3-center">
-                            <span id="titulo">
-                                Polideportivo<br>
-                                Locos por Aldosivi
-                            </span>
-                        </div>
-                        
-                        <div class="w3-bar">
-                            <div class="w3-bar-item">
-                                <div class="container">
-                                    <label for="uname"><b>Nombre De Usuario</b></label>
-                                    <input type="text" placeholder="Nombre de usuario" name="uname" required>
-
-                                    <label for="psw"><b>Contraseña</b></label>
-                                    <input type="password" placeholder="Contraseña" name="psw" required>
-                                    
-                                    <button type="submit">Ingresar</button>
-                                </div>
-
-                                <div class="container" style="background-color:#f1f1f1">
-                                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
-                                    <span class="psw w3-text-black">Olvidaste tu <a href="#">contraseña?</a></span>
-                                </div>
-                            </div>
-                            <div class="w3-bar-item">
-                                <div class="container">
-                                    <label for="email"><b>Email</b></label>
-                                    <input type="email" placeholder="Email" name="Email" required>
-
-                                    <label for="uname"><b>Nombre De Usuario</b></label>
-                                    <input type="text" placeholder="Nombre de usuario" name="uname" required>
-
-                                    <label for="psw"><b>Contraseña</b></label>
-                                    <input type="password" placeholder="Contraseña" name="psw" required>
-
-                                    <label for="dni"><b>Dni</b></label>
-                                    <input type="number" placeholder="Dni" name="Dni" required>
-
-                                    <label for="telef"><b>Telefono</b></label>
-                                    <input type="tel" placeholder="Telefono" name="Telefono" required>
-
-                                    <!-- Metodo de pago iría acá -->
-
-                                    <button type="submit">Registrarse</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <br>
-        </div>
+    <div id="estadio">
+        <!-- Barra de navegacion -->
+        <div id="nav-placeholder"></div>
+        <script>
+        $(function(){
+        $("#nav-placeholder").load("/Polideportivo-LocosPorAldosivi/nav.html");
+        });
+        </script>
         
         <div class="w3-row">
             <div class="w3-container w3-third w3-center">
