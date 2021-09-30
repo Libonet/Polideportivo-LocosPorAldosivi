@@ -3,12 +3,13 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
 }
 
 .frases {
   padding: 10px;
   font-family: 'Sanchez', serif;
-  font-size: 30px;
+  font-size: 25px;
   color: #fab62d;
   font-weight: bold;
   text-shadow:
@@ -16,6 +17,24 @@ body {
   1px -1px 0 #000,
   -1px 1px 0 #000,
   1px 1px 0 #000;
+}
+
+#autor {
+  font-family: "Times New Roman", serif;
+  font-size: 20px;
+  color: #fab62d;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+
+.RectanguloVerde
+{
+    padding: 10px;
+    background: #3999138e;
+    box-shadow: 7px 7px 13px black;
 }
 
 /* Empieza Slideshow */
@@ -61,8 +80,8 @@ img {vertical-align: middle;}
 /* Caption text */
 .text {
   font-family: 'Sanchez', serif;
-  font-size: 30px;
-  color: #fab62d;
+  font-size: 15px;
+  color: #ffffff;
   text-shadow:
   -1px -1px 0 #000,
   1px -1px 0 #000,

@@ -10,24 +10,33 @@
 
 #titulo2 {
     font-family: 'Sancreek', cursive;
-    font-size:30px;
+    font-size:35px;
     color:black;
 }
+
+
+#texto {
+    font-family: "Times New Roman";
+    font-size:25px;
+    color:black;
+}
+
 
 body {
     background-image: url("../../resources/MessiGaturroAldosivi.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
 }
 
 #dentroCaja {
     font-family: 'Sanchez', serif;
-    font-size: 28px;
+    font-size: 30px;
     color: #000000;
     background-color:#f5b026d0;
-    width: 1200px;
-    height:700px;
+    width: 90%;
+    height:70%;
     border: 15px solid rgba(23, 82, 23, 0.877);
     padding: 50px;
     margin: auto;
