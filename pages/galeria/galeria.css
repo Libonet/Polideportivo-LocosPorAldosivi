@@ -6,6 +6,28 @@ body {
     background-position: center;
 }
 
+#dentroCaja {
+  font-family: 'Sanchez', serif;
+  font-size: 30px;
+  text-align: center;
+  color: #000000;
+  background-color:#f5b026d0;
+  width: 90%;
+  height:70%;
+  border: 15px solid rgba(23, 82, 23, 0.877);
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin: auto;
+}
+
+#RectanguloAmarillo
+{
+    background: #E0D700;
+    box-shadow: 7px 7px 13px black;
+}
+
 .frases {
   padding: 10px;
   font-family: 'Sanchez', serif;
@@ -72,6 +94,11 @@ img {vertical-align: middle;}
   border-radius: 3px 0 0 3px;
 }
 
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
@@ -88,7 +115,7 @@ img {vertical-align: middle;}
   -1px 1px 0 #000,
   1px 1px 0 #000;
   padding: 8px 12px;
-  position: absolute;
+  position: relative;
   bottom: 8px;
   width: 100%;
   text-align: center;
@@ -201,12 +228,6 @@ img {vertical-align: middle;}
 /*tamaño celular*/
 @media screen and (max-width: 800px){
     
-}
-
-#RectanguloAmarillo
-{
-    background: #E0D700;
-    box-shadow: 7px 7px 13px black;
 }
 
 /* Estilo de las imagenes
