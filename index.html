@@ -29,145 +29,27 @@
         <script>
         $(function(){
         // $("#nav-placeholder").load("http/Polideportivo-LocosPorAldosivi/nav.html");
-        $("#nav-placeholder").load("https://www.agssoft.ar/NUEVE/nav.html");
+        $("#nav-placeholder").load("./nav.html");
         });
         </script>
         
         <div class="w3-row">
-            <div class="w3-container w3-third w3-center">
-                <button onclick="document.getElementById('id02').style.display='block'" id="reserva" class="w3-btn" >Reservá una cancha</button>
-            <div id="id02" class="w3-modal">
-                <div class="w3-modal-content">
-                    <div class="w3-container">
-                        <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                        <br>
-                        <br>
-                        <!-- formulario -->
-                        <!-- Ver nota HTML.1 - Luca -->
-                        <form id="ReservaDeCancha" class="w3-container">
-                            <!-- Nombre, apellido y tipo de cancha -->
-                            <div class="w3-row-padding">    
-                                <div class="w3-quarter">
-                                    <span class="w3-left">Nombre *</span>
-                                    <input type="text" id="nombre" name="nombre" class="w3-input w3-light-grey" 
-                                    oninvalid="this.setCustomValidity('Por favor ingrese su nombre')"
-                                    oninput="this.setCustomValidity('')" required/>
-                                    <span class="error" aria-live="polite"></span> <!-- Como se muestra la ventana de error -->
-                                </div>
-                                <div class="w3-quarter">
-                                    <span class="w3-left">Apellido *</span>
-                                    <input type="text" id="apellido" name="apellido" class="w3-input w3-light-grey" 
-                                    oninvalid="this.setCustomValidity('Por favor ingrese su apellido')"
-                                    oninput="this.setCustomValidity('')" required>
-                                </div>
-                                <div class="w3-col" style="width:50px">
-                                    <p></p>
-                                </div>
-                                <div class="w3-rest">
-                                    <span class="w3-left">Tipo de cancha *</span>
-                                    <select id="cancha" name="cancha" class="w3-select w3-light-grey" 
-                                    oninvalid="this.setCustomValidity('Por favor ingrese el tipo de cancha')"
-                                    oninput="this.setCustomValidity('')" required>
-                                        <option value="" disabled selected>Elija una opcion</option>
-                                        <option value="Futbol5">Futbol5</option>
-                                        <option value="Basquet">Basquet</option>
-                                        <option value="Volley">Volley</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <!-- Nombre de los equipos -->
-                            <div class="w3-row-padding">
-                                <div class="w3-col" style="width: 40%;">
-                                    <span class="w3-left">Nombre del equipo</span>
-                                    <input type="text" id="partidario" name="partidario" class="w3-input w3-light-grey">
-                                </div>
-                                <div class="w3-col" style="width:150px">
-                                    <p></p>
-                                </div>
-                                <div class="w3-col" style="width: 40%;">
-                                    <span class="w3-left">Nombre del equipo rival</span>
-                                    <input type="text" id="rival" name="rival" class="w3-input w3-light-grey">
-                                </div>
-                            </div>
-                            <!-- Email y fecha a reservar -->
-                            <div class="w3-row-padding">
-                                <div class="w3-col" style="width: 40%;">
-                                    <span class="w3-left">Email *</span>
-                                        <input type="email" id="email" name="email" class="w3-input w3-light-grey" required
-                                        oninput="setCustomValidity(''); 
-                                        this.validity.valid ? '' : setCustomValidity(validity.typeMismatch ? 
-                                        'Ingrese un correo valido' : 'Por favor ingrese su email')">
-                                        <!-- Ver nota HTML.1 - Luca -->
-                                </div>
-                                <div class="w3-col" style="width:150px">
-                                    <p></p>
-                                </div>
-                                <div class="w3-col" style="width: 40%;">
-                                    <span class="w3-right">Fecha a reservar *</span>
-                                    <input type="date" id="fecha" name="fecha" class="w3-input w3-light-grey"
-                                    oninvalid="this.setCustomValidity('Por favor ingrese una fecha')"
-                                    oninput="this.setCustomValidity('')" required>
-
-                                    <span class="w3-left">Hora a reservar *</span>
-                                    <input type="time" id="hora" name="hora" class="w3-input w3-light-grey"
-                                    oninvalid="this.setCustomValidity('Por favor ingrese una hora')"
-                                    oninput="this.setCustomValidity('')" required>
-                                </div>
-                            </div>
-                            <!-- Teléfono y cantidad de jugadores por equipo -->
-                            <div class="w3-row-padding">
-                                <div class="w3-col" style="width: 40%;">
-                                    <span class="w3-left">Teléfono *</span>
-                                    <input type="tel" id="telefono" name="telefono" class="w3-input w3-light-grey" 
-                                    oninvalid="this.setCustomValidity('Por favor ingrese su número telefónico/celular')"
-                                    oninput="this.setCustomValidity('')" required>
-                                </div>
-                            </div>
-                            <div class="w3-row-padding">
-                                <div class="w3-col" style="width: 20%;">
-                                    <span class="w3-left" style="text-align: left;">Cantidad de jugadores por equipo</span>
-                                    <input type="number" id="cant_jugadores" name="cant_jugadores" class="w3-input w3-light-grey" max="30"
-                                    oninvalid="this.validity.valid ? '' : setCustomValidity(validity.rangeOverflow ? 
-                                    'No puede ser un valor mayor a 30' : 'Ingrese un número')"
-                                    oninput="this.setCustomValidity('')">
-                                </div>
-                            </div>
-                            <span class="w3-left">* campos requeridos</span>
-                            <body>
-                                <button id="enviar" type="submit" class="w3-right">Enviar</button>
-                            </body>
-                        </form>
-                        <br>
-                        <!-- texto contacto -->
-                        <div id="dentroCaja">
-                            Cómo contactarnos?
-                            Podés comunicarte por cualquier pregunta en todo momento a nuestro whatsapp: <br>
-                            +54 9 233 2737382<br> 
-                            A nuestro fijo 
-                            4403928<br>
-                            <br>
-                            o a nuestro correo electrónico <br>
-                            LocosPorAldosivi@outlook.com<br>
-                            <br><br>
-                            Para inscribirte como socio, tenés que venir presencialmente al predio.
-                            <br><br>
-                            No dejés de buscarnos en Instagram y Twitter en
-                            @LocosPorAldosiviOK
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
+            <a href="pages/reserva/reserva.html" >
+              <div class="w3-container w3-third w3-center">
+                  <button id="reserva" class="w3-btn" >
+                    Reservá una cancha
+                  </button>
+              </div>
+            </a>
             <div class="w3-container w3-third">
-                <p></p>
+              <p></p>
             </div>
             <!-- nuestros equipos -->
             <div class="w3-container w3-third w3-center">
                 <a href="pages/equipos/equipos.html" >
-                <button class="w3-btn" id="reserva">
-                    Nuestros Equipos
-                </button>
+                    <button class="w3-btn" id="reserva">
+                        Nuestros Equipos
+                    </button>
                 </a>
             </div>
         </div>
