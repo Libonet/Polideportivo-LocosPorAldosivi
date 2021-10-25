@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="reserva.css">
 <link rel="stylesheet" href="../../barra.css">
 <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+<script src="reserva.js" type="module"></script>
 
 <body>
   <!-- Barra de navegacion -->
@@ -30,7 +31,7 @@
     });
   </script>
 
-  <form id="regForm" action="/action_page.php">
+  <form id="regForm" action="/action_page.php" style="width: 70%; height: 70%;">
     <h1 class="">Reservar:</h1>
     <!-- One "tab" for each step in the form: -->
     <div class="tab"><span class="w3-left">Contacto:</span>
@@ -53,8 +54,9 @@
           <option value="Volley">Volley</option>
       </select>
     </div>
-    <div class="tab"><span class="w3-left">Fechas:</span>
-    <!-- acá iría el calendario, si hubiera uno -->
+    <div class="tab">
+      <span>Fechas:</span>
+      <div id="app-calendar"></div>
     </div>
     <div class="tab"><span class="w3-left">Horario:</span>
       <!-- acá irían los horarios, si tuvieramos -->

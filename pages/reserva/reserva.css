@@ -2,12 +2,58 @@
   box-sizing: border-box;
 }
 
+:root {
+  --light-gray: #DADCE0;
+  --light-blue: #1B9CE2;
+}
+
 body {
   background-image: url("../../resources/AldosiviClean.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+
+  margin: 0;
+}
+
+#app-calendar {
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  height: 100%;
+}
+
+input[type=button] {
+  cursor: pointer;
+}
+
+.day {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  font-size: 12px;
+  transition: background-color 200ms, color 200ms;
+}
+
+.name {
+  padding-bottom: 5px;
+}
+
+.weekend {
+  color: var(--light-blue);
+}
+.selected {
+  background-color: var(--light-blue);
+  color: white;
+}
+
+.tab span {
+  font-family: 'Sanchez', serif;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 
 #regForm {
