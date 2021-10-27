@@ -1,4 +1,3 @@
-
 $(function() {
     console.log("JQuery is Working");
 
@@ -15,17 +14,18 @@ $(function() {
         e.preventDefault(); // Esto permite que la página no vuelva a la landing page, acción que ocurre por default
     });
 
-    // Que capture cuando se hace un submit desde el form ReservaDeCancha (esto lo hace el botón Enviar)
-    $('#ReservaDeCancha').submit(function(e) {
+    // Que capture cuando se hace un submit desde el form RegistroSocio (esto lo hace el botón Enviar)
+    $('#RegistroSocio').submit(function(e) {
         // var campos2 = $(this).serialize(); // Ver nota JavaScript.1a - Luca
         // console.log( campos2 );
-        const data = new FormData(ReservaDeCancha); // Ver nota JavaScript.1b - Luca
+        const data = new FormData(RegistroSocio); // Ver nota JavaScript.1b - Luca
         const datos = JSON.stringify( Object.fromEntries(data.entries()) );
         console.log(datos)
         $.ajax({
             url: 'grabar_datos.php',
             type: 'POST',
             data: { datos }, // aparentemente esto es lo mismo que {nombre : nombre}. Lo que está pasando es que estás enviando una propiedad (nombre) con el valor nombre
+            // dataType: "JSON",
             success: function(res) {
                 console.log(res);
                 // if (res == -1)
@@ -40,4 +40,3 @@ $(function() {
         e.preventDefault();
     });
 });
-
