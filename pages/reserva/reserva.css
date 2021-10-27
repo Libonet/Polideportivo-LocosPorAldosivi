@@ -7,6 +7,29 @@
   --light-blue: #1B9CE2;
 }
 
+.ContenedorBlanco
+{
+    background: #faf9e3;
+    box-shadow: 7px 7px 13px black;
+}
+
+.dentroCaja {
+  /* font-family: 'Sanchez', serif;
+  font-size: 30px; */
+  /* text-align: center; */
+  color: #000000;
+  background-color:#ffffffd2;
+  /* width: 90%;
+  height:70%; */
+  border: 2px solid rgba(0, 0, 0, 0.877);
+  /* padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin: auto; */
+}
+
+
 body {
   background-image: url("../../resources/AldosiviClean.jpg");
   background-repeat: no-repeat;
