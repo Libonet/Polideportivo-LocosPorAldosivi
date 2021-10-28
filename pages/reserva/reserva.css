@@ -29,6 +29,11 @@
   margin: auto; */
 }
 
+.containerCentrado{
+  display: flex;
+  justify-content: center;
+}
+
 
 body {
   background-image: url("../../resources/AldosiviClean.jpg");
@@ -61,13 +66,34 @@ input[type=button] {
 }
 
 .name {
-  padding-bottom: 5px;
+  font-family: 'Sanchez', serif;
+  font-weight: bold;
+  font-size: 15px;
+  padding-bottom: 10px;
 }
+
+/* .mesActual {
+
+} */
+
+/* .mesPasado {
+
+}  */
 
 .weekend {
   color: var(--light-blue);
 }
+
 .selected {
+  background-color: var(--light-blue);
+  color: white;
+}
+
+.containerHorario {
+  padding: 6px;
+}
+
+.selectedHorario {
   background-color: var(--light-blue);
   color: white;
 }
@@ -109,10 +135,14 @@ input.invalid {
   display: none;
 }
 
+/* #app-calendar .tab button {
+  
+} */
+
 button {
-  background-color: #71e6bb;
+  background-color: #4ad6a3;
+  border: 1px solid rgba(0, 0, 0, 0.877);
   color: #000000;
-  border: none;
   padding: 10px 20px;
   font-size: 17px;
   font-family: Raleway;
