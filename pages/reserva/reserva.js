@@ -15,21 +15,19 @@ function crearCalendario(year, month) {
     if (day < 1) {
       if (month-1 == -1){
         var diaCorrecto = monthDays[11] + day;
-        var lastMonthDates = new Date((fecha.getFullYear())-1, 11, diaCorrecto) // Teo, el año debería ser calculado acá
       }
       else { 
         var diaCorrecto = monthDays[month-1] + day;
-        var lastMonthDates = new Date(fecha.getFullYear(), month-1, diaCorrecto)
       }
-      crearDiasCalendario(diaCorrecto, cont, lastMonthDates, false);
+      crearDiasCalendario(diaCorrecto, cont, false, year, month);
     }
-    if (day >= 1){
+    else if (day >= 1){
       date[day-1] = new Date(fecha.getFullYear(), month, day) // Teo, el año debería ser calculado acá
-      crearDiasCalendario(day, cont, date[day-1], true);
+      crearDiasCalendario(day, cont, true, year, month);
     }
     cont = cont+1;
   }
-  document.querySelectorAll("#app-calendar .day button").forEach
+  document.querySelectorAll("#app-calendar button").forEach
   (day => {
     day.addEventListener("click", event => {
       var required = document.getElementById("required-calendario");
@@ -43,20 +41,23 @@ function crearCalendario(year, month) {
 });
 }
 
-function crearDiasCalendario(day, cont, date, mesActual) {
-  var weekend = isWeekend(cont);
-
-  let name = "";
-  if (cont <= 7) {
-    const dayName = getDayName(date);
-    name = `<div class='name'>${dayName}</div>`;
+function crearDiasCalendario(day, cont, mesActual, year, month) {
+  
+  if(cont == 1){
+    for (let aux=1; aux <=7; aux++){
+      var weekend = isWeekend(aux);
+      let name = "";
+      const dayName = getDayName(aux);
+      name = `<div class='name ${weekend ? "weekend" : ""}'>${dayName}</div>`;
+      calendar.insertAdjacentHTML("beforeend", `${name}`);
+    }
   }
 
-  if (mesActual){
-    calendar.insertAdjacentHTML("beforeend", `<div class="day ${weekend ? "weekend" : ""}"> ${name} <button type="button" class="mesActual" ">${day}</button></div>`);
+  if (mesActual && new Date(year, month, day)>=new Date(fecha.getFullYear(), fecha.getMonth(), fecha.getDate())){ 
+    calendar.insertAdjacentHTML("beforeend", `<button type="button" class="mesActual day" ">${day}</button>`);
   }
   else {
-    calendar.insertAdjacentHTML("beforeend", `<div class="day ${weekend ? "weekend" : ""}"> ${name} <div class="mesPasado">${day}</div></div>`);
+    calendar.insertAdjacentHTML("beforeend", `<div class="mesPasado day">${day}</div>`);
   }
 }
 
