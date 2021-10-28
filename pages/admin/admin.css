@@ -28,6 +28,40 @@ body {
     margin: auto;
 }
 
+#CajaTexto{
+    /* font-family: 'Sanchez', serif;
+    font-size: 30px; */
+    text-align: center;
+    color: #000000;
+    background-color:#ffffffd2;
+    width: 90%;
+    height:70%;
+    border: 2px solid rgba(0, 0, 0, 0.877);
+    /* padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin: auto; */
+  }
+
+  #CajaContainer{
+    display: flex;
+    justify-content: center;
+  }
+  #CajaBoton{
+    font-family: 'Sanchez', serif;
+    /*font-size: 30px; */
+    text-align: center;
+    color: #000000;
+    background-color:#ffffff;
+    border: 2px solid rgb(0, 0, 0);
+    width: 100%;
+    /* padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 20px;*/
+  }
+  
 #texto {
     font-family: "Times New Roman";
     font-size:25px;
