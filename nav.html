@@ -63,7 +63,7 @@
     <div class="w3-col" style="width: 3%;">
       <p></p>
     </div>
-    <form class="modal-content animate w3-col" action="login.php" method="POST" style="width: 45%;">
+    <form id="Logeo" class="modal-content animate w3-col" style="width: 45%;">
       <br>
       <div class="w3-center">
         <img src="http:/Polideportivo-LocosPorAldosivi/resources/poli_deportivo.png" width="75px" height="75px">
@@ -79,11 +79,11 @@
       <div class="container">
         <h1 class="w3-text-green">Ingresar</h1>
 
-        <label for="uname"><b>Nombre De Usuario</b></label>
-        <input type="text" placeholder="Nombre de usuario" name="uname" required>
+        <label for="uname"><b>Correo</b></label>
+        <input id="login_correo" type="text" placeholder="Correo" name="uname" required>
 
         <label for="psw"><b>Contraseña</b></label>
-        <input type="password" placeholder="Contraseña" name="psw" required>
+        <input id="login_contraseña" type="password" placeholder="Contraseña" name="psw" required>
         
         <button type="submit">Ingresar</button>
       </div>

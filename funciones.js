@@ -5,11 +5,11 @@ $(function() {
     $('#reserva').click(function verificar(e) {
         // Ver nota JavaScript.2 - Luca
         date = new Date
-        fecha.min = date.toISOString().split("T")[0];
-        fecha.max = new Date(date.setMonth((date).getMonth()+2)).toISOString().split("T")[0];
+        fecha_min = date.toISOString().split("T")[0];
+        fecha_max = new Date(date.setMonth((date).getMonth()+2)).toISOString().split("T")[0];
 
         // Forma abreviada de Ajax:
-        $.post("verificar_horario.php",'',function(response){
+        $.post("verificar_horario.php",{fecha_min, fecha_max}, function(response) {
             console.log(response);
         })
         e.preventDefault(); // Esto permite que la página no vuelva a la landing page, acción que ocurre por default
@@ -21,12 +21,11 @@ $(function() {
         // console.log( campos2 );
         const data = new FormData(RegistroSocio); // Ver nota JavaScript.1b - Luca
         const datos = JSON.stringify( Object.fromEntries(data.entries()) );
-        console.log(datos)
+        // console.log(datos)
         $.ajax({
-            url: 'grabar_datos.php',
+            url: 'registro.php',
             type: 'POST',
             data: { datos }, // aparentemente esto es lo mismo que {nombre : nombre}. Lo que está pasando es que estás enviando una propiedad (nombre) con el valor nombre
-            // dataType: "JSON",
             success: function(res) {
                 console.log(res);
                 // if (res == -1)
@@ -37,6 +36,21 @@ $(function() {
                 console.log("Existe un problema en el archivo 'grabar_datos.php'");
                 alert(respuesta);
             }
+        })
+        e.preventDefault();
+    });
+
+    $('#Logeo').submit(function(e) {
+        // Método JQuery
+        let correo = $('#login_correo').val()
+        let contraseña = $('#login_contraseña').val()
+        $.post('login.php', {correo, contraseña}, function(respuesta) {
+            console.log(respuesta)
+            if (respuesta == "true") {
+                console.log("Nice")
+            }
+            else
+                alert("Introdujo mal alguno de los campos, por favor, vuelva a intentarlo")
         })
         e.preventDefault();
     });

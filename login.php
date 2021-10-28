@@ -5,49 +5,20 @@ require('database.php');
 $correo = $_POST['correo'];
 $contraseña = $_POST['contraseña'];
 
-$msg = '';
-
-// if (!empty($correo) && !empty($contraseña)) {
-    $query = " SELECT Correo FROM clientes_internos WHERE Correo = '$correo' AND Contraseña = '$contraseña' ";
+if (!empty($correo) && !empty($contraseña)) {
+    $query = " SELECT (Correo) FROM clientes_internos WHERE Correo = '$correo' AND Contraseña = '$contraseña' ";
     $result = mysqli_query($connection, $query);
 
-    if ($result->num_rows) {
-        session_start();
-        $_SESSION['correo']  = $correo;
-        $_SESSION['contraseña'] = $contraseña;
-        header('Location: index.html');
-    } 
-    else {
-        // $msg = 'Nombre o contraseña incorrecta';
-        echo '<script language="javascript">';
-        echo 'alert("Nombre o contraseña incorrecta")';
-        echo '</script>';
-        echo "xd";
-        // header("Location: index.html");
+    if ($result->num_rows > 0) {
+        setcookie("Correo", $correo, time() + 60, '/');
+        
+        // Basado, AJAX lo que retorna es un string del server, por ello no sirve el return. Es por eso que tuve que sacar
+        // el cartel de la database.php
+        echo "true";
+        return true;
     }
-// }
+    echo "false";
+    return false;
+}
 
 ?>
-
-<!-- <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-
-    <link rel="stylesheet" href="login.css">
-
-</head>
-
-<body>
-    <form action="login.php" method="GET">
-        <input type="email" name="correo" id="" placeholder="Ingrese su correo">
-        <input type="password" name="contraseña" id="" placeholder="Ingrese su contraseña">
-        <button type="submit">Enviar</button>
-        <!-- https://stackoverflow.com/questions/41904199/whats-the-point-of-button-type-button 
-        https://dev.to/clairecodes/why-its-important-to-give-your-html-button-a-type-58k9
-    </form>
-</body>
-</html> -->

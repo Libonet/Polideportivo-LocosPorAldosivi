@@ -1,5 +1,7 @@
 https://stackoverflow.com/questions/48624475/php-block-shortcut-in-visual-studio-code
 
+    
+    
     JavaScript:
 
 1) a_
@@ -56,6 +58,22 @@ El formulario. Copio la breve explicación que expresa el documento de arriba:
 
 Por lo tanto, creo que la solución que propone el muchacho del video es más claro y corto. Creo que la mayor característica de 
 AJAX no se le va a dar uso en nuestra página.
+
+4) 28/10
+
+Tras muchas dudas con comentarios como el de Dagos: "JQuery está muerto, fue creado para el uso de JavaScript en Internet Explorer",
+creo haber llegado a una conclusión. Al ser JQuery un framework, sus funciones están construidas sobre Javascript nativo, y siendo
+AJAX un protocolo del mismo me preguntaba cómo haría algo similar JavaScript base. Me molestaba no poder llegar a una respuesta.
+Tras pensar un segundo y buscar correctamente en Google, la obtuve: XMLhttpRequest
+    // https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing
+
+AJAX está basado en esto, y la idea es poder hacer una llamada asincrónica mucho más fácil. Encontré además el siguiente artículo
+comparando ambos, muy claro:
+    // https://stackoverflow.com/questions/4657287/what-is-the-difference-between-xmlhttprequest-jquery-ajax-jquery-post-jquery
+
+Si bien parece que en alguna versión de Javascript apareció el protocolo fetch() que parece ser un XMLhttpRequest actualizado, 
+seguramente superando al famoso AJAX, me pareció suficiente con entender cómo era mínimamente que funcionaba, por lo que voy a 
+decantarme a continuar usando AJAX.
 
 
 
