@@ -39,7 +39,7 @@ function crearDiasCalendario(day, cont, date, mesActual) {
   }
 
   if (mesActual){
-    calendar.insertAdjacentHTML("beforeend", `<div class="day ${weekend ? "weekend" : ""}"> ${name} <button type="button" class="mesActual" onclick="seleccionDia(${day})">${day}</button></div>`);
+    calendar.insertAdjacentHTML("beforeend", `<div class="day ${weekend ? "weekend" : ""}"> ${name} <button type="button" class="mesActual" ">${day}</button></div>`);
   }
   else {
     calendar.insertAdjacentHTML("beforeend", `<div class="day ${weekend ? "weekend" : ""}"> ${name} <div class="mesPasado">${day}</div></div>`);
@@ -51,6 +51,8 @@ crearCalendario(actualMonth);
 document.querySelectorAll("#app-calendar .day button").forEach
 (day => {
   day.addEventListener("click", event => {
+    var required = document.getElementById("required-calendario");
+    required.innerHTML = '<input class="required" placeholder="" value="'+day.innerHTML+'" name="day">';
     var select = document.getElementsByClassName("selected");
     for (var i = 0; i < select.length; i++) {
       select[i].classList.remove("selected");
@@ -59,20 +61,34 @@ document.querySelectorAll("#app-calendar .day button").forEach
   });
 });
 
-document.querySelectorAll("#app-calendar .next button").forEach
-(day => {
-  day.addEventListener("click", event => {
-    var calendar = document.getElementById("#app-calendar");
-    calendar.innerHTML.replace("");
-    crearCalendario(actualMonth+1)
+document.querySelectorAll(".horario").forEach
+(hora => {
+  hora.addEventListener("click", event => {
+    var required = document.getElementById("required-horario");
+    required.innerHTML = '<input class="required" placeholder="" value="'+hora.innerHTML+'" name="hora">';
+    var select = document.getElementsByClassName("selectedHorario");
+    for (var i = 0; i < select.length; i++) {
+      select[i].classList.remove("selectedHorario");
+    }
+    event.currentTarget.classList.add("selectedHorario");
   });
 });
 
-document.querySelectorAll("#app-calendar .previous button").forEach
-(day => {
-  day.addEventListener("click", event => {
-    var calendar = document.getElementById("#app-calendar");
-    calendar.innerHTML.replace("");
-    crearCalendario(actualMonth)
-  });
-});
+export {crearCalendario}
+
+// var calendarButton = document.querySelectorAll("#CalendarButton");
+// calendarButton.forEach(button => {
+//   button.addEventListener("click", event => {
+
+//   });
+// });
+
+// document.querySelector(".previous button").forEach(day => {
+//   day.addEventListener("click", event => {
+//     var calendar = document.getElementById("#app-calendar");
+//     calendar.innerHTML.replace("");
+//     crearCalendario(actualMonth);
+//     var nextButton = document.querySelector("#previousButton");
+//     nextButton.innerHTML = `<button type="button" class="previous">Anterior</button>`
+//   });
+// });

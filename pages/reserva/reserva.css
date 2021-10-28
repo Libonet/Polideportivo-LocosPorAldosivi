@@ -61,13 +61,25 @@ input[type=button] {
 }
 
 .name {
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
+
+/* .mesActual {
+
+} */
+
+/* .mesPasado {
+
+} */
 
 .weekend {
   color: var(--light-blue);
 }
 .selected {
+  background-color: var(--light-blue);
+  color: white;
+}
+.selectedHorario {
   background-color: var(--light-blue);
   color: white;
 }
