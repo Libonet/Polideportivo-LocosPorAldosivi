@@ -1,12 +1,12 @@
-const isWeekend = day => {
+const fecha = new Date()
+
+const isWeekend = pos => {
   // 6 para sabado, 0 domingo
-  return day % 7 == 6 || day % 7 == 0;
+  return pos % 7 == 6 || pos % 7 == 0;
 }
 
 const getDayName = day => {
-  const date = new Date(2021, 10, day);
-
-  return new Intl.DateTimeFormat("es-ES", { weekday: "short" }).format(date);
+  return new Intl.DateTimeFormat("es-ES", { weekday: "short" }).format(day);
 }
 
 export {isWeekend, getDayName}
