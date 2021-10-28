@@ -33,7 +33,11 @@
   </script>
 
   <form id="regForm" action="/action_page.php" style="width: 70%; height: 70%;">
-    <h1 class="dentroCaja">Reservar:</h1>
+
+    <div class="w3-container containerCentrado">
+      <h1 class="dentroCaja" style = "width: 30%; "> Reservar: </h1>
+    </div>
+    
     <!-- One "tab" for each step in the form: -->
     <div class="tab"><span class="w3-left">Contacto:</span>
       <p><input class="required" placeholder="Nombre..." oninput="this.className = 'required'" name="fname"></p>
@@ -91,31 +95,49 @@
 
         <div class="w3-col dentroCaja" style="width: 25%; height: 100%;">
           <h1 style="text-align: center; font-size: 40px;">Horarios: </h1>
-          <div class="w3-container">
+          <div class="w3-container containerHorario">
+
+          <div class="containerHorario">
+            <button type="button" class="mesActual horario"> 
+              8:00 am 
+            </button>
+          </div>
+
+          <div class="containerHorario">
           <button type="button" class="mesActual horario"> 
-            8:00 am 
+            10:00 am 
           </button>
+          </div>
+
+          <div class="containerHorario">
           <button type="button" class="mesActual horario"> 
-            10:00 am
+            12:00 pm 
           </button>
+          </div>
+
+          <div class="containerHorario">
           <button type="button" class="mesActual horario"> 
-            12:00 pm
+            14:00 pm 
           </button>
+          </div>
+
+          <div class="containerHorario">
           <button type="button" class="mesActual horario"> 
-            14:00 pm
+            16:00 pm 
           </button>
+          </div>
+
+          <div class="containerHorario">
           <button type="button" class="mesActual horario"> 
-            16:00 pm
+            18:00 pm 
           </button>
+          </div>
+
+          <div class="containerHorario">
           <button type="button" class="mesActual horario"> 
-            18:00 pm
+            20:00 pm 
           </button>
-          <button type="button" class="mesActual horario"> 
-            20:00 pm
-          </button>
-          <button type="button" class="mesActual horario"> 
-            22:00 pm
-          </button>
+          </div>
         </div>
         </div>
     </div>
