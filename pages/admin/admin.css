@@ -1,0 +1,76 @@
+#titulo {
+    font-family: 'Sancreek', cursive;
+    font-size:25px;
+    color:black;
+}
+
+#seleccion {
+    background-color: rgba(39, 139, 36, 0.863);
+}
+
+body {
+    background-image: url("../../resources/AldosiviWallpaperPeroNo4k.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+#dentroCaja {
+    font-family: 'Sanchez', serif;
+    font-size: 30px;
+    color: #000000;
+    background-color:#f5b026d0;
+    width: 90%;
+    height:70%;
+    border: 15px solid rgba(23, 82, 23, 0.877);
+    padding: 50px;
+    margin: auto;
+}
+
+#CajaTexto{
+    /* font-family: 'Sanchez', serif;
+    font-size: 30px; */
+    text-align: center;
+    color: #000000;
+    background-color:#ffffffd2;
+    width: 90%;
+    height:70%;
+    border: 2px solid rgba(0, 0, 0, 0.877);
+    /* padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin: auto; */
+  }
+
+  #CajaContainer{
+    display: flex;
+    justify-content: center;
+  }
+  #CajaBoton{
+    font-family: 'Sanchez', serif;
+    /*font-size: 30px; */
+    text-align: center;
+    color: #000000;
+    background-color:#ffffff;
+    border: 2px solid rgb(0, 0, 0);
+    width: 100%;
+    /* padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 20px;*/
+  }
+  
+#texto {
+    font-family: "Times New Roman";
+    font-size:25px;
+    color:black;
+}
+
+
+#titulo2 {
+    font-family: 'Sancreek', cursive;
+    font-size:30px;
+    color:black;
+}
