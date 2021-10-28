@@ -4,21 +4,51 @@ const calendar = document.querySelector("#app-calendar");
 
 const fecha = new Date();
 const monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-const month = fecha.getMonth();
+const actualMonth = fecha.getMonth();
+const firstDay = new Date(fecha.getFullYear(), actualMonth, 1);
+var cont = 1;
 
-for (let day = 1; day <= monthDays[month]; day++) {
-  const weekend = isWeekend(day);
+function crearCalendario(month) {
+  for (let day = 2-(firstDay.getDay()); day <= monthDays[month]; day++) {
+    if (day < 1) {
+      if (month-1 == -1){
+        var diaCorrecto = monthDays[11] + day;
+        var lastMonthDates = new Date((fecha.getFullYear())-1, 11, diaCorrecto) // Teo, el año debería ser calculado acá
+      }
+      else { 
+        var diaCorrecto = monthDays[month-1] + day;
+        var lastMonthDates = new Date(fecha.getFullYear(), month-1, diaCorrecto)
+      }
+      crearDiasCalendario(diaCorrecto, cont, lastMonthDates, false);
+    }
+    if (day >= 1){
+      var date = new Date(fecha.getFullYear(), month, day) // Teo, el año debería ser calculado acá
+      crearDiasCalendario(day, cont, date, true);
+    }
+    cont = cont+1;
+  }
+}
+
+function crearDiasCalendario(day, cont, date, mesActual) {
+  var weekend = isWeekend(cont);
 
   let name = "";
-  if (day <= 7) {
-    const dayName = getDayName(day);
+  if (cont <= 7) {
+    const dayName = getDayName(date);
     name = `<div class='name'>${dayName}</div>`;
   }
 
-  calendar.insertAdjacentHTML("beforeend", `<div class="day ${weekend ? "weekend" : ""}"> ${name} <input type="button" value="${day}"></div>`);
+  if (mesActual){
+    calendar.insertAdjacentHTML("beforeend", `<div class="day ${weekend ? "weekend" : ""}"> ${name} <button type="button" class="mesActual" onclick="seleccionDia(${day})">${day}</button></div>`);
+  }
+  else {
+    calendar.insertAdjacentHTML("beforeend", `<div class="day ${weekend ? "weekend" : ""}"> ${name} <div class="mesPasado">${day}</div></div>`);
+  }
 }
 
-document.querySelectorAll("#app-calendar .day input").forEach
+crearCalendario(actualMonth);
+
+document.querySelectorAll("#app-calendar .day button").forEach
 (day => {
   day.addEventListener("click", event => {
     var select = document.getElementsByClassName("selected");
@@ -26,5 +56,23 @@ document.querySelectorAll("#app-calendar .day input").forEach
       select[i].classList.remove("selected");
     }
     event.currentTarget.classList.add("selected");
+  });
+});
+
+document.querySelectorAll("#app-calendar .next button").forEach
+(day => {
+  day.addEventListener("click", event => {
+    var calendar = document.getElementById("#app-calendar");
+    calendar.innerHTML.replace("");
+    crearCalendario(actualMonth+1)
+  });
+});
+
+document.querySelectorAll("#app-calendar .previous button").forEach
+(day => {
+  day.addEventListener("click", event => {
+    var calendar = document.getElementById("#app-calendar");
+    calendar.innerHTML.replace("");
+    crearCalendario(actualMonth)
   });
 });

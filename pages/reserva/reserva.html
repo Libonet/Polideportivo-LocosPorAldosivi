@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="reserva.css">
 <link rel="stylesheet" href="../../barra.css">
 <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
-<script src="reserva.js" type="module"></script>
+<script src="reserva.js" type="module" defer></script>
 
 <body>
   <!-- Barra de navegacion -->
@@ -35,15 +35,15 @@
     <h1 class="">Reservar:</h1>
     <!-- One "tab" for each step in the form: -->
     <div class="tab"><span class="w3-left">Contacto:</span>
-      <p><input class="required" placeholder="Nombre..." oninput="this.className = ''" name="fname"></p>
-      <p><input class="required" placeholder="Apellido..." oninput="this.className = ''" name="lname"></p>
-      <p><input class="required" placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
-      <p><input class="required" placeholder="Telefono..." oninput="this.className = ''" name="phone"></p>
+      <p><input class="required" placeholder="Nombre..." oninput="this.className = 'required'" name="fname"></p>
+      <p><input class="required" placeholder="Apellido..." oninput="this.className = 'required'" name="lname"></p>
+      <p><input class="required" placeholder="E-mail..." oninput="this.className = 'required'" name="email"></p>
+      <p><input class="required" placeholder="Telefono..." oninput="this.className = 'required'" name="phone"></p>
     </div>
     <div class="tab"><span class="w3-left">Información de los equipos:</span>
-      <p><input class="required" placeholder="Nombre de equipo..." oninput="this.className = ''" name="fname"></p>
-      <p><input class="required" placeholder="Nombre de equipo rival..." oninput="this.className = ''" name="lname"></p>
-      <p><input class="required" placeholder="Telefono..." oninput="this.className = ''" name="phone"></p>
+      <p><input class="required" placeholder="Nombre de equipo..." oninput="this.className = 'required'" name="fname"></p>
+      <p><input class="required" placeholder="Nombre de equipo rival..." oninput="this.className = 'required'" name="lname"></p>
+      <p><input class="required" placeholder="Telefono..." oninput="this.className = 'required'" name="phone"></p>
       <span class="w3-left">Tipo de cancha *</span>
       <select id="cancha" name="cancha" class="w3-select w3-light-grey required" 
       oninvalid="this.setCustomValidity('Por favor ingrese el tipo de cancha')"
@@ -68,8 +68,10 @@
     </div> -->
 
     <div class="tab"> 
-
       <div class="w3-container"> 
+        <div style="display: none;">
+          <p id="required-calendario"><input class="required" placeholder="" value="" name="day"></p>
+        </div>
         <div class="w3-row">
           <span class="dentroCaja">Elegir fecha: </span>
         </div>
@@ -188,7 +190,9 @@
       // If a field is empty...
       if (list2[i].value == "") {
         // add an "invalid" class to the field:
-        list2[i].className += " invalid";
+        if(list2[i].className != "required invalid") {
+          list2[i].className += " invalid";
+        }
         // and set the current valid status to false
         valid = false;
       }
@@ -208,6 +212,11 @@
     }
     //... and adds the "active" class on the current step:
     list[n].className += " active";
+  }
+
+  function seleccionDia(day) {
+    var required = document.getElementById("required-calendario");
+    required.innerHTML = required.innerHTML.replace('<input class="required" placeholder="" value="'+day+'" name="day">');
   }
 </script>
 
