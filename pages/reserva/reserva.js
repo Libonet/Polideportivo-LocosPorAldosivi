@@ -5,10 +5,12 @@ const calendar = document.querySelector("#app-calendar");
 const fecha = new Date();
 const monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 const actualMonth = fecha.getMonth();
-const firstDay = new Date(fecha.getFullYear(), actualMonth, 1);
 var cont = 1;
+var date = [];
 
-function crearCalendario(month) {
+function crearCalendario(year, month) {
+  const firstDay = new Date(year, month, 1);
+  cont = 1;
   for (let day = 2-(firstDay.getDay()); day <= monthDays[month]; day++) {
     if (day < 1) {
       if (month-1 == -1){
@@ -22,11 +24,23 @@ function crearCalendario(month) {
       crearDiasCalendario(diaCorrecto, cont, lastMonthDates, false);
     }
     if (day >= 1){
-      var date = new Date(fecha.getFullYear(), month, day) // Teo, el año debería ser calculado acá
-      crearDiasCalendario(day, cont, date, true);
+      date[day-1] = new Date(fecha.getFullYear(), month, day) // Teo, el año debería ser calculado acá
+      crearDiasCalendario(day, cont, date[day-1], true);
     }
     cont = cont+1;
   }
+  document.querySelectorAll("#app-calendar .day button").forEach
+  (day => {
+    day.addEventListener("click", event => {
+      var required = document.getElementById("required-calendario");
+      required.innerHTML = '<input class="required" placeholder="" value="'+date[(day.innerHTML)-1].toISOString().split("T")[0]+'" name="day">';
+      var select = document.getElementsByClassName("selected");
+      for (var i = 0; i < select.length; i++) {
+        select[i].classList.remove("selected");
+      }
+      event.currentTarget.classList.add("selected");
+  });
+});
 }
 
 function crearDiasCalendario(day, cont, date, mesActual) {
@@ -46,19 +60,29 @@ function crearDiasCalendario(day, cont, date, mesActual) {
   }
 }
 
-crearCalendario(actualMonth);
+crearCalendario(fecha.getFullYear(), actualMonth);
 
-document.querySelectorAll("#app-calendar .day button").forEach
-(day => {
-  day.addEventListener("click", event => {
-    var required = document.getElementById("required-calendario");
-    required.innerHTML = '<input class="required" placeholder="" value="'+day.innerHTML+'" name="day">';
-    var select = document.getElementsByClassName("selected");
-    for (var i = 0; i < select.length; i++) {
-      select[i].classList.remove("selected");
-    }
-    event.currentTarget.classList.add("selected");
-  });
+
+
+document.querySelector("#next").addEventListener("click", event => {
+  var calendar = document.getElementById("app-calendar");
+  calendar.innerHTML = "";
+  if(actualMonth+1 == 12) {
+    crearCalendario(fecha.getFullYear()+1,0);
+  }
+  else {
+    crearCalendario(fecha.getFullYear(), actualMonth+1);
+  }
+  event.currentTarget.style.display = "none";
+  document.querySelector("#previous").style.display = "block";
+});
+
+document.querySelector("#previous").addEventListener("click", event => {
+  var calendar = document.getElementById("app-calendar");
+  calendar.innerHTML = "";
+  crearCalendario(fecha.getFullYear(),actualMonth);
+  event.currentTarget.style.display = "none";
+  document.querySelector("#next").style.display = "block";
 });
 
 document.querySelectorAll(".horario").forEach
