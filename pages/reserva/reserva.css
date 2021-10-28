@@ -2,12 +2,107 @@
   box-sizing: border-box;
 }
 
+:root {
+  --light-gray: #DADCE0;
+  --light-blue: #1B9CE2;
+}
+
+.ContenedorBlanco
+{
+    background: #faf9e3;
+    box-shadow: 7px 7px 13px black;
+}
+
+.dentroCaja {
+  /* font-family: 'Sanchez', serif;
+  font-size: 30px; */
+  /* text-align: center; */
+  color: #000000;
+  background-color:#ffffffd2;
+  /* width: 90%;
+  height:70%; */
+  border: 2px solid rgba(0, 0, 0, 0.877);
+  /* padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin: auto; */
+}
+
+.containerCentrado{
+  display: flex;
+  justify-content: center;
+}
+
+
 body {
   background-image: url("../../resources/AldosiviClean.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+
+  margin: 0;
+}
+
+#app-calendar {
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  height: 100%;
+}
+
+input[type=button] {
+  cursor: pointer;
+}
+
+.day {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  font-size: 12px;
+  transition: background-color 200ms, color 200ms;
+}
+
+.name {
+  font-family: 'Sanchez', serif;
+  font-weight: bold;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+/* .mesActual {
+
+} */
+
+/* .mesPasado {
+
+}  */
+
+.weekend {
+  color: var(--light-blue);
+}
+
+.selected {
+  background-color: var(--light-blue);
+  color: white;
+}
+
+.containerHorario {
+  padding: 6px;
+}
+
+.selectedHorario {
+  background-color: var(--light-blue);
+  color: white;
+}
+
+.tab span {
+  font-family: 'Sanchez', serif;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 
 #regForm {
@@ -40,10 +135,14 @@ input.invalid {
   display: none;
 }
 
+/* #app-calendar .tab button {
+  
+} */
+
 button {
-  background-color: #71e6bb;
+  background-color: #4ad6a3;
+  border: 1px solid rgba(0, 0, 0, 0.877);
   color: #000000;
-  border: none;
   padding: 10px 20px;
   font-size: 17px;
   font-family: Raleway;

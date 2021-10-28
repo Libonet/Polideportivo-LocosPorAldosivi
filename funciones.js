@@ -1,4 +1,3 @@
-
 $(function() {
     console.log("JQuery is Working");
 
@@ -26,6 +25,7 @@ $(function() {
             url: 'registro.php',
             type: 'POST',
             data: { datos }, // aparentemente esto es lo mismo que {nombre : nombre}. Lo que está pasando es que estás enviando una propiedad (nombre) con el valor nombre
+            // dataType: "JSON",
             success: function(res) {
                 console.log(res);
                 // if (res == -1)
