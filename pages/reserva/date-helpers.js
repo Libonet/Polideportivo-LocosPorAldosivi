@@ -6,7 +6,8 @@ const isWeekend = pos => {
 }
 
 const getDayName = day => {
-  return new Intl.DateTimeFormat("es-ES", { weekday: "short" }).format(day);
+  var date = new Date(2018, 0, day);
+  return new Intl.DateTimeFormat("es-ES", { weekday: "short" }).format(date);
 }
 
 export {isWeekend, getDayName}

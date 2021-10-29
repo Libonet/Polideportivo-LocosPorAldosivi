@@ -59,13 +59,15 @@ input[type=button] {
 
 .day {
   text-align: center;
-  padding-top: 5px;
-  padding-bottom: 20px;
-  font-size: 12px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  font-size: 15px;
+  font-family: 'Sanchez', serif;
   transition: background-color 200ms, color 200ms;
 }
 
 .name {
+  text-align: center;
   font-family: 'Sanchez', serif;
   font-weight: bold;
   font-size: 15px;
@@ -76,9 +78,9 @@ input[type=button] {
 
 } */
 
-/* .mesPasado {
-
-}  */
+.mesPasado {
+  background-color: #a1a1a1b7;
+} 
 
 .weekend {
   color: var(--light-blue);
@@ -89,9 +91,16 @@ input[type=button] {
   color: white;
 }
 
-.containerHorario {
+.containerHorarios {
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.divHorario{
   padding: 6px;
 }
+
 
 .selectedHorario {
   background-color: var(--light-blue);
