@@ -1,7 +1,7 @@
 $(function() {
     console.log("JQuery is Working");
 
-    $('#reserva').click(function verificar(e) {
+    $('#reserva').submit(function verificar(e) {
         // Ver nota JavaScript.2 - Luca
         date = new Date
         fecha_min = date.toISOString().split("T")[0];
