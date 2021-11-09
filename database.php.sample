@@ -12,7 +12,7 @@ if ($connection -> connect_errnor) {
 }
 else {
   // Nota: Solo se puede poner \n con doble comillas
-  echo "Se conectó correctamente a la base de datos\n";
+  // echo "Se conectó correctamente a la base de datos\n";
 }
 
 ?>
